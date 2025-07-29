@@ -1,0 +1,2293 @@
+[
+  {
+    "question": "Количество атрибутов в таблице называется",
+    "options": {
+      "a": "кардинальность отношения",
+      "b": "n-мерность отношения",
+      "c": "ранг отношения",
+      "d": "сила отношения",
+      "e": "мощность отношения",
+      "f": "степень отношения"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Среда СУБД состоит",
+    "options": {
+      "a": "только из аппаратного обеспечения (компьютеров) и пользователей",
+      "b": "только из аппаратного обеспечения (компьютеров)",
+      "c": "только из программного обеспечения",
+      "d": "только из пользователей данных",
+      "e": "из аппаратного обеспечения (компьютеров), данных, процедур пользователей",
+      "f": "пользователей и администратора",
+      "g": "только из моделей мета данных"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Реляционные операции сравнения",
+    "options": {
+      "a": "≤",
+      "b": "<=",
+      "c": "=",
+      "d": "<>",
+      "e": ">=",
+      "f": "≤",
+      "g": ">"
+    },
+    "correct_answer": "b,e,g"
+  },
+  {
+    "question": "Типы работы разработчика логической базы данных",
+    "options": {
+      "a": "абстрагированное и сетевое",
+      "b": "системный и сетевое проектирование",
+      "c": "логическое и эффективное проектирование",
+      "d": "концептуальное и логическое проектирование",
+      "e": "концептуальное и сетевое проектирование",
+      "f": "логическое и сетевое",
+      "g": "реляционное и концептуальное проектирование"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Ключ, который является первичным в другой таблице, но в текущей таблице служит вспомогательным ключом для связи",
+    "options": {
+      "a": "естественный ключ",
+      "b": "вторичный ключ",
+      "c": "суррогатный ключ",
+      "d": "первичный ключ",
+      "e": "простой ключ",
+      "f": "внешний ключ",
+      "g": "составной ключ",
+      "h": "искусственный ключ"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Запрос, который выбирает сумму всех уникальных значений столбца в таблице",
+    "options": {
+      "a": "select sum(distinct column) from table;",
+      "b": "select sum(column) from table;",
+      "c": "select unique sum(column) from table;",
+      "d": "select mean(column) from table;",
+      "e": "select sum(column) from table where sum(column) is distinct;",
+      "f": "select sum(column) from table group by column;",
+      "g": "select column, sum(column) from table;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Запрос, который выбирает поля, где column1 содержит букву 'а' или 'е'",
+    "options": {
+      "a": "select * from table where column1 like '%a%' and column1 like '%e%'",
+      "b": "select * from table where column1 consist of('a','e')",
+      "c": "select * from table where column1 like '%a%' or column1 like '%e%'",
+      "d": "select * from table where instr(column1,'a')>0 or instr(column1,'e')>0",
+      "e": "select * from table where instr(column1,'a')>0 and instr(column1,'e')>0",
+      "f": "select * from table where column1 like 'a%' and column1 like 'e%'",
+      "g": "select * from table where instr(column1,'a') or instr(column1,'e')"
+    },
+    "correct_answer": "c,d"
+  },
+  {
+    "question": "Запрос, который выбирает поля, где column1 содержит значения от 1 до 3 включительно",
+    "options": {
+      "a": "select * from table where column1 =1 and 3",
+      "b": "select * from table where column1 between 1 and 3",
+      "c": "select * from table where column1=1 and column1=3",
+      "d": "select * from table where column1 in (1,2,3)",
+      "e": "select * from table where column1<1 or column1<3",
+      "f": "select * from table where column1=1 or column1=2 or column1=3",
+      "g": "select * from table where column1=1 and column1=2 and column1=3"
+    },
+    "correct_answer": "b,d,f"
+  },
+  {
+    "question": "Запрос, сортирующий отделы (порядок возрастания) по сумме зарплат сотрудников, работающих там, при подсчёте суммы учитывались только зарплаты больше 10000 (department, salary – атрибуты таблицы table)",
+    "options": {
+      "a": "select department, sum(salary) from table order by last_name desc",
+      "b": "select department, sum(salary) from table group by department order by last_name",
+      "c": "select department, sum(salary) from table group by department having sum(salary)>10000 order by sum(salary)",
+      "d": "select sum(salary), department from table where salary>10000 group by sum(salary) asc",
+      "e": "select department, sum(salary) from table where salary>10000 group by department order by sum(salary)"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Запрос, сортирующий отделы по средней арифметической зарплате в порядке возрастания (department, salary – атрибуты таблицы table)",
+    "options": {
+      "a": "select department, sum(salary)/count() from table group by department order by sum(salary)/count() asc",
+      "b": "select avg(salary) as average, department from table group by department order by avg(salary) asc",
+      "c": "select department, mean(salary) from table group by department order by mean(salary)",
+      "d": "select department, avg(salary) from table group by department",
+      "e": "select department, avg(salary) from table group by department order by avg(salary)",
+      "f": "select department, avg(salary) from table group by department order by department"
+    },
+    "correct_answer": "d,e"
+  },
+  {
+    "question": "Объединение двух таблиц, возвращающее только совпадающие строки из двух таблиц по сопоставленному условию",
+    "options": {
+      "a": "cross join",
+      "b": "left outer join",
+      "c": "right outer join",
+      "d": "outer join",
+      "e": "full outer join",
+      "f": "inner join"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Цели управления параллельным выполнением в распределённой среде",
+    "options": {
+      "a": "освобождение всех установленных блокировок",
+      "b": "отправить всем участникам команду GLOBAL_ABORT",
+      "c": "устойчивость к отказам на узле и в линиях связи",
+      "d": "поместить в системный журнал запись commit и обеспечить её принудительную запись из буфера",
+      "e": "направить на узлы сообщение о принятом глобальном решении",
+      "f": "отсутствие дополнительных ограничений на структуру"
+    },
+    "correct_answer": "c,d"
+  },
+  {
+    "question": "Подраздел SQL, который используется для добавления данных в базу данных, для изменения существующих данных в базе данных или удаления данных из базы данных",
+    "options": {
+      "a": "data manipulation language",
+      "b": "data definition language",
+      "c": "data altering language",
+      "d": "data control language",
+      "e": "transaction control language",
+      "f": "mdx",
+      "g": "query language",
+      "h": "query by example"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных",
+    "options": {
+      "a": "rollback to savepoint A",
+      "b": "rollback",
+      "c": "checkpoint",
+      "d": "commit A",
+      "e": "commit",
+      "f": "savepoint A"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Запрос, который выводит название продукта, чья цена выше средней арифметической цены всех продуктов",
+    "options": {
+      "a": "select price from products where price > (select avg(price) from products)",
+      "b": "select product_name from products where price > (select avg(price) from products)",
+      "c": "select product_name from products where price = avg(price)",
+      "d": "select product_name from products where price > (select sum(price)/count(*) from products)",
+      "e": "select product_name from products where price > (select median(price) from products)",
+      "f": "select product_name from products where price > (select sum(price) from products)"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Оператор DESCRIBE",
+    "options": {
+      "a": "передает программе описание столбцов результирующей таблицы",
+      "b": "предоставляет программе описание входных параметров",
+      "c": "освобождает память от дополнительной информации",
+      "d": "указывает на этап обработки данных",
+      "e": "отправляет дату и время транзакций",
+      "f": "отправляет курсор на дополнительную информацию",
+      "g": "выводит адрес ошибки"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Операторы сравнения однострочных подзапросов",
+    "options": {
+      "a": ">",
+      "b": "all",
+      "c": "<",
+      "d": "in",
+      "e": "=",
+      "f": "some",
+      "g": "any"
+    },
+    "correct_answer": "a,c,e"
+  },
+  {
+    "question": "Типы работы разработчика логической базы данных",
+    "options": {
+      "a": "абстрагированное и сетевое",
+      "b": "системный и сетевое проектирование",
+      "c": "логическое и эффективное проектирование",
+      "d": "концептуальное и логическое проектирование",
+      "e": "концептуальное и сетевое проектирование",
+      "f": "логическое и сетевое",
+      "g": "реляционное и концептуальное проектирование"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Количество атрибутов в таблице называется",
+    "options": {
+      "a": "кардинальность отношения",
+      "b": "n-мерность отношения",
+      "c": "ранг отношения",
+      "d": "сила отношения",
+      "e": "мощность отношения",
+      "f": "степень отношения"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Среда СУБД состоит",
+    "options": {
+      "a": "только из аппаратного обеспечения (компьютеров) и пользователей",
+      "b": "только из аппаратного обеспечения (компьютеров)",
+      "c": "только из программного обеспечения",
+      "d": "только из пользователей данных",
+      "e": "из аппаратного обеспечения (компьютеров), данных, процедур пользователей",
+      "f": "пользователей и администратора",
+      "g": "только из моделей мета данных",
+      "h": "только из моделей и идей"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Реляционные операции сравнения",
+    "options": {
+      "a": "⊆",
+      "b": "<=",
+      "c": "⊇",
+      "d": "<>",
+      "e": "=>",
+      "f": "⊇",
+      "g": ">",
+      "h": "~~"
+    },
+    "correct_answer": "b,d,g"
+  },
+  {
+    "question": "Запрос, который выбирает поля, где column1 содержит букву 'a' или 'e'",
+    "options": {
+      "a": "select * from table where column1 like '%a%' and column1 like '%e%'",
+      "b": "select * from table where column1 consist of('a','e')",
+      "c": "select * from table where column1 like '%a%' or column1 like '%e%'",
+      "d": "select * from table where instr(column1,'a')>0 or instr(column1,'e')>0",
+      "e": "select * from table where instr(column1,'a')>0 and instr(column1,'e')>0",
+      "f": "select * from table where column1 like 'a%' and column1 like 'e%'",
+      "g": "select * from table where column1 like 'a%' or column1 like 'e%'"
+    },
+    "correct_answer": "c,d"
+  },
+  {
+    "question": "Запрос, который выбирает поля, где column1 содержит значения от 1 до 3 включительно",
+    "options": {
+      "a": "select * from table where column1 =1 and 3",
+      "b": "select * from table where column1 between 1 and 3",
+      "c": "select * from table where column1=1 and column1=3",
+      "d": "select * from table where column1 in (1,2,3)",
+      "e": "select * from table where column1<1 or column1<3",
+      "f": "select * from table where column1=1 or column1=2 or column1=3"
+    },
+    "correct_answer": "b,d,f"
+  },
+  {
+    "question": "Ключ, который является первичным в другой таблице, но в текущей таблице служит вспомогательным ключом для связи",
+    "options": {
+      "a": "естественный ключ",
+      "b": "вторичный ключ",
+      "c": "суррогатный ключ",
+      "d": "первичный ключ",
+      "e": "простой ключ",
+      "f": "внешний ключ",
+      "g": "составной ключ",
+      "h": "искусственный ключ"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Запрос, который выбирает сумму всех уникальных значений столбца в таблице",
+    "options": {
+      "a": "select sum(distinct column) from table;",
+      "b": "select sum(column) from table;",
+      "c": "select unique sum(column) from table;",
+      "d": "select mean(column) from table;",
+      "e": "select sum(column) from table where sum(column) is distinct;",
+      "f": "select sum(column) from table group by column;",
+      "g": "select column, sum(column) from table;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Подраздел SQL, который используется для добавления данных в базу данных, для изменения существующих данных в базе данных или удаления данных из базы данных",
+    "options": {
+      "a": "data manipulation language",
+      "b": "data definition language",
+      "c": "data altering language",
+      "d": "data control language",
+      "e": "transaction control language",
+      "f": "mdx",
+      "g": "query language",
+      "h": "query by example"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Запрос, сортирующий отделы (порядок возрастания) по сумме зарплат сотрудников, работающих там, при подсчёте суммы учитывались только зарплаты больше 10000 (department, salary – атрибуты таблицы table)",
+    "options": {
+      "a": "select department, sum(salary) from table order by last_name desc",
+      "b": "select department, sum(salary) from table group by department order by last_name",
+      "c": "select department, sum(salary) from table group by department having sum(salary)>10000 order by sum(salary)",
+      "d": "select sum(salary), department from table where salary>10000 group by sum(salary) asc",
+      "e": "select department, sum(salary) from table where salary>10000 group by department order by sum(salary)"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Запрос, сортирующий отделы по средней арифметической зарплате в порядке возрастания (department, salary – атрибуты таблицы table)",
+    "options": {
+      "a": "select department, sum(salary)/count() from table group by department order by sum(salary)/count() asc",
+      "b": "select avg(salary) as average, department from table group by department order by avg(salary) asc",
+      "c": "select department, mean(salary) from table group by department order by mean(salary)",
+      "d": "select department, avg(salary) from table group by department",
+      "e": "select department, avg(salary) from table group by department order by avg(salary)",
+      "f": "select department, avg(salary) from table group by department order by department"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Объединение двух таблиц, возвращающее только совпадающие строки из двух таблиц по сопоставленному условию",
+    "options": {
+      "a": "cross join",
+      "b": "left outer join",
+      "c": "right outer join",
+      "d": "outer join",
+      "e": "full outer join",
+      "f": "inner join"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных",
+    "options": {
+      "a": "rollback to savepoint A",
+      "b": "rollback",
+      "c": "checkpoint",
+      "d": "commit A",
+      "e": "commit",
+      "f": "savepoint A"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Запрос, который выводит название продукта, чья цена выше средней арифметической цены всех продуктов",
+    "options": {
+      "a": "select price from products where price > (select avg(price) from products)",
+      "b": "select product_name from products where price > (select avg(price) from products)",
+      "c": "select product_name from products where price >= avg(price)",
+      "d": "select product_name from products where price > (select sum(price)/count(*) from products)",
+      "e": "select product_name from products where price > (select median(price) from products)",
+      "f": "select product_name from products where price > (select sum(price) from products)"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Оператор DESCRIBE",
+    "options": {
+      "a": "передает программе описание столбцов результирующей таблицы",
+      "b": "предоставляет программе описание входных параметров",
+      "c": "освобождает память от дополнительной информации",
+      "d": "указывает на этап обработки данных",
+      "e": "отправляет дату и время транзакций",
+      "f": "отправляет курсор на дополнительную информацию",
+      "g": "выводит адрес ошибки"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Операторы сравнения однострочных подзапросов",
+    "options": {
+      "a": ">",
+      "b": "all",
+      "c": "<",
+      "d": "in",
+      "e": "=",
+      "f": "some",
+      "g": "any"
+    },
+    "correct_answer": "a,c,e"
+  },
+  {
+    "question": "Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных",
+    "options": {
+      "a": "rollback to savepoint A",
+      "b": "rollback",
+      "c": "checkpoint",
+      "d": "commit A",
+      "e": "commit",
+      "f": "savepoint A"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Нормализация",
+    "options": {
+      "a": "включает объединение существующих таблиц в одну большую",
+      "b": "процесс удаления избыточных данных из таблиц для повышения эффективности хранения, целостности данных и масштабируемости",
+      "c": "процесс преобразования сложных структур данных в простые, стабильные структуры данных",
+      "d": "процесс добавления избыточных данных в таблицы для повышения эффективности хранения, целостности данных и масштабируемости",
+      "e": "процесс преобразования простых структур данных в сложные, стабильные структуры данных",
+      "f": "включает разделение существующих таблиц на несколько других, которые могут быть объединены или связаны когда выдается запрос"
+    },
+    "correct_answer": "b,f"
+  },
+  {
+    "question": "Файловый сервер",
+    "options": {
+      "a": "клиент принимает от пользователя запрос",
+      "b": "клиент управляет пользовательским интерфейсом",
+      "c": "большой объем сетевого трафика",
+      "d": "на каждой рабочей станции должна находиться полная копия СУБД",
+      "e": "управление параллельной работой",
+      "f": "клиент управляет пользовательской логикой приложения"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Аномалии, которые возможны при денормализации",
+    "options": {
+      "a": "аномалии создания",
+      "b": "аномалии объединения",
+      "c": "аномалии обновления",
+      "d": "аномалии соединения",
+      "e": "аномалии слияния",
+      "f": "аномалии вставки",
+      "g": "аномалии удаления",
+      "h": "аномалии поиска"
+    },
+    "correct_answer": "c,f,g"
+  },
+  {
+    "question": "Название таблицы в следующем коде: Insert into data (id, name, table, table2)",
+    "options": {
+      "a": "insert",
+      "b": "нет названия таблицы",
+      "c": "id",
+      "d": "name",
+      "e": "table2",
+      "f": "into",
+      "g": "table",
+      "h": "data"
+    },
+    "correct_answer": "h"
+  },
+  {
+    "question": "В таблице данных студентов добавьте в ячейку с номером пять 25 баллов на языке SQL",
+    "options": {
+      "a": "create student insert 25 where number = 5 ;",
+      "b": "enter 25 to grade where number = 5;",
+      "c": "insert 25 to number=25;",
+      "d": "insert student set grade= grade + 25 where number = 5 ;",
+      "e": "update student set grade= grade + 25 where number = 5 ;"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Вывести список студентов 2, 3, 4 курсов или специальности «Туризм»",
+    "options": {
+      "a": "select name from stud where speciality = 'Tourism' or course > '1'",
+      "b": "select name from stud where speciality = 'Tourism' and course > 1",
+      "c": "select name from stud where speciality = 'Tourism' or course = '1'",
+      "d": "select name from stud where speciality = 'Tourism'; select name from stud where course > 1",
+      "e": "select name from stud where speciality = 'Tourism' and course >= 1",
+      "f": "select name from stud where speciality = 'Tourism' or course > 1"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "На SQL вывести номера, имена и номера отделов работников, служащих в отделах 15, 17, 19",
+    "options": {
+      "a": "select number, name, dept_number from emp where dept_number in (15, 17, 19)",
+      "b": "select * from emp where dept_number in (15, 17, 19)",
+      "c": "select number, name, dept_number from emp where dept_number order in (15, 17, 19)",
+      "d": "select number, name, dept_number from emp where dept_number =15 or dept_number =17 or dept_number = 19",
+      "e": "select number, name, dept_number from emp where dept_number between (15, 17, 19)",
+      "f": "select number, name, dept_number from emp where dept_number =15 or dept_number =17 or dept_number = 19"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Результат выполнения следующей команды: create table calc (x int, y int); insert into calc values (5, 45); select * from calc x, y, x*y;",
+    "options": {
+      "a": "1",
+      "b": "5, 45",
+      "c": "45",
+      "d": "50",
+      "e": "5",
+      "f": "225",
+      "g": "5, 45, 50",
+      "h": "5, 45, 50"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Результат выполнения данной команды на SQL: create table department (id int, salary int); insert into department values (102, 45000); insert into department values (103, 15000); insert into department values (104, 90000); insert into department values (105, 10000); Select round (y)",
+    "options": {
+      "a": "40000",
+      "b": "15000",
+      "c": "160000",
+      "d": "10000",
+      "e": "45000",
+      "f": "90000"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Возможные варианты ответов следующего кода SQL: select name from stud where name like 'A%'; (Выбирает из таблицы stud имена, начинающиеся на букву 'A'.)",
+    "options": {
+      "a": "Serzhan",
+      "b": "Alibek",
+      "c": "Samal",
+      "d": "Serik",
+      "e": "Saken",
+      "f": "Aigul",
+      "g": "Aisulu"
+    },
+    "correct_answer": "b,f,g"
+  },
+  {
+    "question": "Результат выполнения следующей команды на SQL: create table stud (x int, y int); insert into stud values (005, 45); insert into stud values (006, 70); insert into stud values (007, 95); insert into stud values (008, 100); order by y (Выводим значения y, отсортированные по возрастанию.)",
+    "options": {
+      "a": "77,5",
+      "b": "45, 70, 95, 100",
+      "c": "005, 006, 007, 008",
+      "d": "310",
+      "e": "008, 007, 006, 005",
+      "f": "100, 95, 70, 45"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Результат выполнения следующей команды для данной таблицы: select name from instructor where dept = 'Physics' order by name; Таблица: name dept teacher Aigerim Physics Berikova M.Zh. Bauyrzhan Math Ivanov P.A. Gulzhan Physics Omarova P.E. Samat Physics Erbolova A.S.",
+    "options": {
+      "a": "Berikova M.Zh., Erbolova A.S., Ivanov P.A., Omarova P.E.",
+      "b": "Physics",
+      "c": "Aigerim, Bauyrzhan",
+      "d": "Berikova M.Zh., Erbolova A.S., Omarova P.E.",
+      "e": "Aigerim, Bauyrzhan, Gulzhan, Samat",
+      "f": "Aigerim, Gulzhan, Samat"
+    },
+    "correct_answer": "d,f"
+  },
+  {
+    "question": "Для упорядочивания по алфавиту используется следующая команда (изображение 15.jpg)",
+    "options": {
+      "a": "list",
+      "b": "join",
+      "c": "change from A to Z",
+      "d": "order by",
+      "e": "between A to Z",
+      "f": "from A to Z",
+      "g": "filter by",
+      "h": "filter on"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Результат выполнения следующего оператора SQL: SELECT NAME, DISCIPLINE FROM STUD WHERE GRADE < 50; (изображение 16.jpg)",
+    "options": {
+      "a": "Akbota, Math",
+      "b": "40, Akbota, Math",
+      "c": "Akbota, Math, 47",
+      "d": "Nazgul, Geography, 40",
+      "e": "Nazgul, Geography",
+      "f": "Batyr, Biology",
+      "g": "Batyr, Biology, 40"
+    },
+    "correct_answer": "a,e"
+  },
+  {
+    "question": "Использование команды SELECT (изображение 13.jpg)",
+    "options": {
+      "a": "набор",
+      "b": "начало",
+      "c": "использование",
+      "d": "фильтрация",
+      "e": "создание",
+      "f": "отбор",
+      "g": "корреляция",
+      "h": "выбор"
+    },
+    "correct_answer": "h"
+  },
+  {
+    "question": "Результат выполнения следующего SQL-запроса: select name from stud where name like 'A%'; (изображение 14.jpg)",
+    "options": {
+      "a": "Serzhan",
+      "b": "Alibek",
+      "c": "Samal",
+      "d": "Serik",
+      "e": "Saken",
+      "f": "Aigul",
+      "g": "Aisulu",
+      "h": "Raimbek"
+    },
+    "correct_answer": "b,f,g"
+  },
+  {
+    "question": "Правильный синтаксис написания кода на SQL",
+    "options": {
+      "a": "select from students",
+      "b": "select *from data",
+      "c": "select * from data",
+      "d": "select *data from students",
+      "e": "select data*students from",
+      "f": "select *stud from data",
+      "g": "select * from *data",
+      "h": "select data from students"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Название таблицы в следующем коде: Insert into data (id, name, table, table2)",
+    "options": {
+      "a": "insert",
+      "b": "нет названия таблицы",
+      "c": "id",
+      "d": "name",
+      "e": "table2",
+      "f": "into",
+      "g": "table",
+      "h": "data"
+    },
+    "correct_answer": "h"
+  },
+  {
+    "question": "Использование команды SELECT",
+    "options": {
+      "a": "набор",
+      "b": "начало",
+      "c": "использование",
+      "d": "фильтрация",
+      "e": "создание",
+      "f": "отбор",
+      "g": "корреляция",
+      "h": "выбор"
+    },
+    "correct_answer": "h"
+  },
+  {
+    "question": "Результат выполнения следующей команды на SQL: SELECT NAME, DISCIPLINE FROM STUD WHERE GRADE <50;",
+    "options": {
+      "a": "Akbota, Math",
+      "b": "40, Akbota, Math",
+      "c": "Akbota, Math, 47",
+      "d": "Nazgul, Geography, 40",
+      "e": "Nazgul, Geography",
+      "f": "Batyr, Biology",
+      "g": "Batyr, Biology, 40",
+      "h": "Nazgul, Geography, GRADE=40"
+    },
+    "correct_answer": "a,e"
+  },
+  {
+    "question": "Операции, которые нельзя применять к базе данных",
+    "options": {
+      "a": "сжатие",
+      "b": "удаление данных",
+      "c": "обновление",
+      "d": "оптимизация",
+      "e": "удаление файлов",
+      "f": "создание",
+      "g": "вставлять данные",
+      "h": "форматирование"
+    },
+    "correct_answer": "e,h"
+  },
+  {
+    "question": "Команды, которые не существуют в языке SQL",
+    "options": {
+      "a": "insert",
+      "b": "select",
+      "c": "delete",
+      "d": "enter",
+      "e": "input",
+      "f": "update",
+      "g": "create",
+      "h": "start"
+    },
+    "correct_answer": "d,e,h"
+  },
+  {
+    "question": "Названия столбцов в следующем коде: Insert into data (id, name, table)",
+    "options": {
+      "a": "into",
+      "b": "table",
+      "c": "name",
+      "d": "insert",
+      "e": "id",
+      "f": "нет названия столбцов",
+      "g": "data",
+      "h": "insert, into, data, id, name, table"
+    },
+    "correct_answer": "c,e"
+  },
+  {
+    "question": "Результат выполнения следующих операторов SQL: SELECT ID, NAME, CITY, GROUP FROM STUDENT WHERE GROUP=1;",
+    "options": {
+      "a": "6, Erbol, Atyrau, 2",
+      "b": "7, Zhanna, Karaganda, 2",
+      "c": "5, Almas, Aktau, 1",
+      "d": "2, Zhanagir, Kostanay, 1",
+      "e": "2, Edige, Shimkent, 2",
+      "f": "Aigul, Kostanay, 1, 2",
+      "g": "1, Alma, Almaty, 1",
+      "h": "1, Altyn, Oral, 2"
+    },
+    "correct_answer": "c,d,g"
+  },
+  {
+    "question": "Результат выполнения следующей команды SQL: create table student (id int, name varchar(20), grade int); insert into student values (1, 'Alma', 85); insert into student values (2, 'Ayan', 90); insert into student values (3, 'Alina', 75); select * from student where grade > 80;",
+    "options": {
+      "a": "1, Alma, 85",
+      "b": "2, Ayan, 90",
+      "c": "3, Alina, 75",
+      "d": "1, Alina, 85",
+      "e": "2, Alina, 90",
+      "f": "3, Alma, 75",
+      "g": "Alma, Ayan, Alina",
+      "h": "1, Ayan, 90"
+    },
+    "correct_answer": "a,b"
+  },
+  {
+    "question": "Запрос на SQL: select univer, faculty, group from students where name='Alma'",
+    "options": {
+      "a": "select *univer, *faculty, *group from students where name='Alma'",
+      "b": "select univer, faculty, group from students where name='Alma'",
+      "c": "select \"univer\", \"faculty\", \"group\" from \"students\" where \"name\"='Alma'",
+      "d": "select *from students where name='Alma'",
+      "e": "select univer, faculty, group from students where name='Alma'",
+      "f": "select univer, faculty, group from students when name='Alma'",
+      "g": "select \"univer\", \"faculty\", \"group\" from students where name=Alma",
+      "h": "select univer, faculty, group from students where name Alma"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Запрос на добавление новой строки в таблицу student: insert into student (id, name, grade) values (4, 'Dana', 100);",
+    "options": {
+      "a": "insert into student (id, name, grade) values ('Dana', 4, 100)",
+      "b": "insert student (id, name, grade) values (4, 'Dana', 100)",
+      "c": "insert into student values (4, 'Dana', 100)",
+      "d": "create student (id int, name varchar(10), grade int) insert (4, 'Dana', 100)",
+      "e": "add into student (id, name, grade) values (4, 'Dana', 100)",
+      "f": "update student set id = 4, name = 'Dana', grade = 100",
+      "g": "insert student values (4, 'Dana', 100)",
+      "h": "insert values into student (4, 'Dana', 100)"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Команда SQL",
+    "options": {
+      "a": "realter",
+      "b": "alter",
+      "c": "print",
+      "d": "cout",
+      "e": "select",
+      "f": "rechange",
+      "g": "change",
+      "h": "scanner"
+    },
+    "correct_answer": "b,e"
+  },
+  {
+    "question": "Результат выполнения следующей команды SQL: create table department (id int, salary int); insert into department values (102, 45000); insert into department values (103, 15000); insert into department values (104, 90000); insert into department values (105, 10000); Select round(y)",
+    "options": {
+      "a": "40000",
+      "b": "15000",
+      "c": "160000",
+      "d": "90000",
+      "e": "45000",
+      "f": "10000"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Результат выполнения следующей команды для таблицы: create table stud (x int, y int); insert into stud values (005, 45); insert into stud values (006, 70); insert into stud values (007, 95); insert into stud values (008, 100); order by y",
+    "options": {
+      "a": "77,5",
+      "b": "45, 70, 95, 100",
+      "c": "005, 006, 007, 008",
+      "d": "310",
+      "e": "008, 007, 006, 005",
+      "f": "100, 95, 70, 45"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Результат выполнения команды для таблицы (см. картинку): select name from instructor where dept = 'Physics' order by name;",
+    "options": {
+      "a": "Berikova M.Zh., Erbolova A.S., Ivanov P.A., Omarova P.E.",
+      "b": "Physics",
+      "c": "Aigerim, Bauyrzhan",
+      "d": "Berikova M.Zh., Erbolova A.S., Omarova P.E.",
+      "e": "Aigerim, Bauyrzhan, Gulzhan, Samat",
+      "f": "Aigerim, Gulzhan, Samat"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Какая команда используется для удаления таблицы из базы данных?",
+    "options": {
+      "a": "DROP TABLE",
+      "b": "REMOVE TABLE",
+      "c": "DELETE TABLE",
+      "d": "DESTROY TABLE",
+      "e": "ERASE TABLE",
+      "f": "DELETE",
+      "g": "REMOVE",
+      "h": "ERASE"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Какая команда используется для изменения структуры таблицы?",
+    "options": {
+      "a": "CHANGE",
+      "b": "UPDATE",
+      "c": "MODIFY",
+      "d": "ALTER TABLE",
+      "e": "REFRESH",
+      "f": "RESTRUCTURE",
+      "g": "ALTER",
+      "h": "UPDATE TABLE"
+    },
+    "correct_answer": "d,g"
+  },
+  {
+    "question": "Выберите команду, которая удаляет все данные из таблицы, но сохраняет структуру таблицы:",
+    "options": {
+      "a": "DELETE",
+      "b": "REMOVE",
+      "c": "CLEAR",
+      "d": "ERASE",
+      "e": "TRUNCATE TABLE",
+      "f": "ERASE ALL",
+      "g": "DELETE ALL",
+      "h": "REMOVE ALL"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Какая команда используется для изменения данных в таблице?",
+    "options": {
+      "a": "CORRECT",
+      "b": "CHANGE",
+      "c": "EDIT",
+      "d": "UPDATE",
+      "e": "ALTER",
+      "f": "MODIFY",
+      "g": "ADJUST",
+      "h": "REPLACE"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Команда SQL",
+    "options": {
+      "a": "realter",
+      "b": "alter",
+      "c": "print",
+      "d": "cout",
+      "e": "select",
+      "f": "rechange",
+      "g": "change",
+      "h": "scanner"
+    },
+    "correct_answer": "b,e"
+  },
+  {
+    "question": "Виды операций можно применять к базам данных",
+    "options": {
+      "a": "создание",
+      "b": "удаление",
+      "c": "систематизация",
+      "d": "форматирование",
+      "e": "оптимизация",
+      "f": "сжатие",
+      "g": "корреляция",
+      "h": "обновление"
+    },
+    "correct_answer": "a,b,e,h"
+  },
+  {
+    "question": "Использование команды SELECT",
+    "options": {
+      "a": "набор",
+      "b": "начало",
+      "c": "использование",
+      "d": "фильтрация",
+      "e": "создание",
+      "f": "отбор",
+      "g": "корреляция",
+      "h": "выбор"
+    },
+    "correct_answer": "h"
+  },
+  {
+    "question": "Правильный синтаксис написания кода на SQL",
+    "options": {
+      "a": "select from students",
+      "b": "select *from data",
+      "c": "select * from data",
+      "d": "select *data from students",
+      "e": "select data*students from",
+      "f": "select *stud from data",
+      "g": "select * from *data",
+      "h": "select data from students"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Виды строчных данных в работе с БД",
+    "options": {
+      "a": "unknown",
+      "b": "{4,6,8,6,0,10}",
+      "c": "true, false",
+      "d": "1, 2.6, 'stud'",
+      "e": "'stud', 'stud'",
+      "f": "2, 4, 8",
+      "g": "null"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Виды операций можно применять к базам данных",
+    "options": {
+      "a": "создание",
+      "b": "удаление",
+      "c": "систематизация",
+      "d": "форматирование",
+      "e": "оптимизация",
+      "f": "сжатие",
+      "g": "корреляция",
+      "h": "обновление"
+    },
+    "correct_answer": "a,b,e,h"
+  },
+  {
+    "question": "Операции, которые нельзя применять к базам данных",
+    "options": {
+      "a": "сжатие",
+      "b": "удаление данных",
+      "c": "обновление",
+      "d": "оптимизация",
+      "e": "удаление файлов",
+      "f": "создание",
+      "g": "вставлять данные",
+      "h": "форматирование"
+    },
+    "correct_answer": "a,e,h"
+  },
+  {
+    "question": "Команды, которые не существуют в языке SQL",
+    "options": {
+      "a": "insert",
+      "b": "select",
+      "c": "delete",
+      "d": "enter",
+      "e": "input",
+      "f": "update",
+      "g": "create",
+      "h": "start"
+    },
+    "correct_answer": "d,e,h"
+  },
+  {
+    "question": "Название столбцов в следующем коде: Insert into data (id, name, table)",
+    "options": {
+      "a": "into",
+      "b": "table",
+      "c": "name",
+      "d": "insert",
+      "e": "id",
+      "f": "нет названия столбцов",
+      "g": "data",
+      "h": "insert, into, data, id, name, table"
+    },
+    "correct_answer": "b,c,e"
+  },
+  {
+    "question": "Результат выполнения следующих операторов SQL: SELECT ID, NAME, CITY, GROUP FROM STUDENT WHERE GROUP=1;",
+    "options": {
+      "a": "6, Erbol, Atyrau, 2",
+      "b": "7, Zhanna, Karaganda, 2",
+      "c": "5, Almas, Aktau, 1",
+      "d": "2, Zhangir, Kostanay, 1",
+      "e": "2, Edige, Shimkent, 2",
+      "f": "Aigul, Kostanay, 1, 2",
+      "g": "1, Alma, Almaty, 1"
+    },
+    "correct_answer": "c,d,g"
+  },
+  {
+    "question": "Правильный вариант написания запроса на SQL:",
+    "options": {
+      "a": "select *univer, *faculty, *group from students where name=“Alma”",
+      "b": "select *univer, faculty, group from students where name=“Alma”",
+      "c": "select \"univer\", \"faculty\", \"group\" from \"students\" where \"name\"= Alma",
+      "d": "select *from students where name=“Alma”",
+      "e": "select univer, faculty, group from students where name=“Alma”",
+      "f": "select univer, faculty, group from students where name=“Alma”",
+      "g": "select univer, faculty, group from students where name=Alma",
+      "h": "select univer, faculty, group from students where name Alma"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Результат выполнения оператора: update student set grade= grade + 25 where number = 5 ;",
+    "options": {
+      "a": "create student insert 25 where number = 5 ;",
+      "b": "enter 25 to grade where number = 5;",
+      "c": "insert 25 to number=25;",
+      "d": "insert student set grade= grade + 25 where number = 5 ;",
+      "e": "update student set grade= grade + 25 where number = 5 ;"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Какая команда используется для удаления таблицы из базы данных?",
+    "options": {
+      "a": "DROP TABLE",
+      "b": "REMOVE TABLE",
+      "c": "DELETE TABLE",
+      "d": "DESTROY TABLE",
+      "e": "ERASE TABLE",
+      "f": "DELETE",
+      "g": "REMOVE",
+      "h": "ERASE"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Результат выполнения команды: SELECT * FROM EMP WHERE SALARY>100000; (На изображении предполагается таблица EMP с полями SALARY и только одна запись, подходящая под условие SALARY>100000.)",
+    "options": {
+      "a": "200000",
+      "b": "100000",
+      "c": "15000",
+      "d": "9000",
+      "e": "45000",
+      "f": "90000",
+      "g": "160000",
+      "h": "40000"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Результат выполнения команды: SELECT AVG(SALARY) FROM EMP; (На изображении приведены значения SALARY: 45000, 15000, 90000, 10000, 200000.)",
+    "options": {
+      "a": "90000",
+      "b": "45000",
+      "c": "72000",
+      "d": "15000",
+      "e": "160000",
+      "f": "10000",
+      "g": "40000"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Какой из операторов служит для изменения структуры таблицы?",
+    "options": {
+      "a": "MODIFY",
+      "b": "CHANGE",
+      "c": "EDIT",
+      "d": "ALTER TABLE",
+      "e": "UPDATE",
+      "f": "RENAME TABLE",
+      "g": "UPDATE TABLE",
+      "h": "RESTRUCTURE"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Результат выполнения следующей команды SQL: create table student (id int, name varchar(20), grade int); insert into student values (1, 'Alma', 85); insert into student values (2, 'Ayan', 90); insert into student values (3, 'Alina', 75); select * from student where grade > 80;",
+    "options": {
+      "a": "1, Alma, 85",
+      "b": "2, Ayan, 90",
+      "c": "3, Alina, 75",
+      "d": "1, Alina, 85",
+      "e": "2, Alina, 90",
+      "f": "3, Alma, 75",
+      "g": "Alma, Ayan, Alina",
+      "h": "1, Ayan, 90"
+    },
+    "correct_answer": "a,b"
+  },
+  {
+    "question": "Результат выполнения следующей команды SQL: create table calc (x int, y int); insert into calc values (5, 45); select * from calc x, y, x*y;",
+    "options": {
+      "a": "1",
+      "b": "5, 45",
+      "c": "45",
+      "d": "50",
+      "e": "5",
+      "f": "225",
+      "g": "5, 45, 50",
+      "h": "5, 45, 50"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Результат выполнения следующей команды SQL: create table department (id int, salary int); insert into department values (102, 45000); insert into department values (103, 15000); insert into department values (104, 90000); insert into department values (105, 10000); Select round(y)",
+    "options": {
+      "a": "40000",
+      "b": "15000",
+      "c": "160000",
+      "d": "90000",
+      "e": "45000",
+      "f": "10000"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Вывести список студентов 2, 3, 4 курса или специальности «Туризм»",
+    "options": {
+      "a": "select name from stud where speciality = 'Tourism' or course > '1'",
+      "b": "select name from stud where speciality = 'Tourism' and course > 1",
+      "c": "select name from stud where speciality = 'Tourism' or course = '1'",
+      "d": "select name from stud where speciality = 'Tourism'; select name from stud where course > 1",
+      "e": "select name from stud where speciality = 'Tourism' and course >= 1",
+      "f": "select name from stud where speciality = 'Tourism' or course > 1"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Следующая таблица отвечает каким требованиям нормализации? Компания | Марка Toyota | Corolla Toyota | Camry Mercedes Benz | 220",
+    "options": {
+      "a": "13",
+      "b": "Бойс Кода",
+      "c": "12",
+      "d": "6",
+      "e": "5",
+      "f": "1",
+      "g": "4",
+      "h": "ни в какой из перечисленных"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Количество нормальных форм, к которым может быть приведена таблица",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "6",
+      "d": "5",
+      "e": "3",
+      "f": "Бойс Кода (BCNF)",
+      "g": "ни в какой из перечисленных",
+      "h": "4"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Всем требованиям какой нормальной формы соответствует следующая таблица: Имя Телефон Айгуль 87012223334 Айгуль 87012223335 Самат 87012223336 Сауле 87012223337",
+    "options": {
+      "a": "Бойс Кода",
+      "b": "1",
+      "c": "ни в какой из перечисленных",
+      "d": "5",
+      "e": "12",
+      "f": "4",
+      "g": "6",
+      "h": "13"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Название таблицы из следующего кода select number, name, dept_number from emp where dept_number in (15, 17, 19)",
+    "options": {
+      "a": "dept_number",
+      "b": "emp",
+      "c": "name",
+      "d": "number",
+      "e": "in",
+      "f": "select",
+      "g": "where"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Действие выполняемое следующей функцией avg(x)",
+    "options": {
+      "a": "вывод среднего значения столбца x",
+      "b": "вывод минимума строки x",
+      "c": "вывод суммы строки x",
+      "d": "вывод среднего значения строки x",
+      "e": "вывод среднего значения таблицы x",
+      "f": "вывод среднего значения переменной x"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Действие команды alter alter table cast add z int",
+    "options": {
+      "a": "добавляет столбец z и cast в таблицу",
+      "b": "удаляет столбец z и cast",
+      "c": "удаляет столбец z в таблице cast",
+      "d": "удаляет столбец cast в таблице z",
+      "e": "добавляет столбец cast в таблицу z",
+      "f": "добавляет столбец z в таблицу cast"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Вид отношения в базе данных между пользователем и его ID-картой (или удостоверением личности)",
+    "options": {
+      "a": "3:1",
+      "b": "2:1",
+      "c": "1:M",
+      "d": "1:2",
+      "e": "1:1",
+      "f": "1:0",
+      "g": "0:1",
+      "h": "1:3"
+    },
+    "correct_answer": "e"
+  },
+  {
+    "question": "Значение какого поля из таблицы employee будет выдано, если выполнится следующий SQL-запрос? select max(salary) from employee;",
+    "options": {
+      "a": "минимальное значение salary",
+      "b": "среднее значение salary",
+      "c": "количество сотрудников",
+      "d": "максимальное значение salary",
+      "e": "сумма salary",
+      "f": "имя сотрудника",
+      "g": "минимальный id"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Что произойдёт, если к таблице применить команду: alter table employee drop column birthdate;",
+    "options": {
+      "a": "к таблице employee будет добавлен столбец birthdate",
+      "b": "из таблицы employee будет удалён столбец birthdate",
+      "c": "к таблице employee будет добавлен столбец drop",
+      "d": "к таблице employee будет добавлен столбец column",
+      "e": "все данные из employee будут удалены",
+      "f": "таблица employee будет удалена",
+      "g": "birthdate станет обязательным полем"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Какой функцией можно получить количество строк в таблице?",
+    "options": {
+      "a": "avg",
+      "b": "min",
+      "c": "sum",
+      "d": "count",
+      "e": "max",
+      "f": "total",
+      "g": "rows"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Команда для добавления нового столбца в существующую таблицу:",
+    "options": {
+      "a": "add column",
+      "b": "new column",
+      "c": "create column",
+      "d": "insert column",
+      "e": "append column",
+      "f": "join column",
+      "g": "add table"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Декомпозиция таблицы подразумевает",
+    "options": {
+      "a": "удаление с таблицы неинформативных данных",
+      "b": "группировка 2 или более таблиц",
+      "c": "разделение таблицы на 2 или более таблиц",
+      "d": "объединение 2 или более таблиц",
+      "e": "обновление таблицы",
+      "f": "применение команды decompose"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Выражение, описывающее декомпозицию",
+    "options": {
+      "a": "if a→b*y, then a→b and a→y",
+      "b": "if a→b*y, then a→b or a→y",
+      "c": "if a→b*y, then a→b and a≠y",
+      "d": "if a→b*y, then a→b and a→-y",
+      "e": "if a→b*y, then a→b and a→y",
+      "f": "if a→by, then a→b and a→by"
+    },
+    "correct_answer": "b,e"
+  },
+  {
+    "question": "Результат выполнения следующей команды: create table calc (x int, y int); insert into calc values (5, 45); select * from calc x, y, x*y;",
+    "options": {
+      "a": "1",
+      "b": "5, 45",
+      "c": "45",
+      "d": "50",
+      "e": "5",
+      "f": "225",
+      "g": "5, 45, 50",
+      "h": "5, 45, 50"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Расширения файлов БД",
+    "options": {
+      "a": ".xls, .txt",
+      "b": ".mov, .mp3",
+      "c": ".sql, .acs",
+      "d": ".ppt, .sql",
+      "e": ".data, .bmp",
+      "f": ".cdr, .sql",
+      "g": ".txt, .jpg"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Типы данных, используемые в SQL",
+    "options": {
+      "a": "booleans",
+      "b": "data",
+      "c": "rows",
+      "d": "character",
+      "e": "columns",
+      "f": "integer",
+      "g": "information"
+    },
+    "correct_answer": "a,d,f"
+  },
+  {
+    "question": "Следующая таблица отвечает каким требованиям нормализации? Компания | Марка Toyota | Corolla, Camry Mercedes Benz | 220",
+    "options": {
+      "a": "3 НФ",
+      "b": "НФ Бойс-Кодда",
+      "c": "4 НФ",
+      "d": "2 НФ",
+      "e": "ни в какой из перечисленных",
+      "f": "1 НФ",
+      "g": "6 НФ",
+      "h": "5 НФ"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Вывести на экран номера сотрудников, не являющихся руководителями отделов и получающих зарплату, размер которой равен размеру зарплаты какого-либо руководителя отдела",
+    "options": {
+      "a": "select emp_no from emp where emp_no not in (select dept_mng from dept) or emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "b": "select emp_no, name from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "c": "select emp_no from emp where emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "d": "select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "e": "select emp_no from emp where emp_no not in (select dept_mng from dept)",
+      "f": "select * from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Названия столбцов в следующем коде: Insert into data (id, name, table)",
+    "options": {
+      "a": "into",
+      "b": "table",
+      "c": "name",
+      "d": "insert",
+      "e": "id",
+      "f": "нет названия столбцов",
+      "g": "data",
+      "h": "insert, into, data, id, name, table"
+    },
+    "correct_answer": "b,c,e"
+  },
+  {
+    "question": "Количество нормальных форм, к которым может быть приведена таблица",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "6",
+      "d": "5",
+      "e": "3",
+      "f": "Бойс Кода (BCNF)",
+      "g": "ни в какой из перечисленных",
+      "h": "4"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Всем требованиям какой нормальной формы соответствует следующая таблица: Имя Телефон Айгуль 87012223334 Айгуль 87012223335 Самат 87012223336 Сауле 87012223337",
+    "options": {
+      "a": "Бойс Кода",
+      "b": "1",
+      "c": "ни в какой из перечисленных",
+      "d": "5",
+      "e": "12",
+      "f": "4",
+      "g": "6",
+      "h": "13"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Следующая таблица отвечает каким требованиям нормализации? Компания Марка Toyota Corolla Toyota Camry Mercedes Benz 220",
+    "options": {
+      "a": "13",
+      "b": "Бойс Кода",
+      "c": "12",
+      "d": "6",
+      "e": "5",
+      "f": "1",
+      "g": "4",
+      "h": "ни в какой из перечисленных"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Нормальная форма, в которой находится следующая таблица: Имя Телефон Айгуль 87012223334 87012223335 Самат 87012223336 Сауле 87012223337",
+    "options": {
+      "a": "1",
+      "b": "2",
+      "c": "6",
+      "d": "5",
+      "e": "3",
+      "f": "Бойс Кода",
+      "g": "ни в какой из перечисленных",
+      "h": "4"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Операция, выполняемая командой insert into student values (1, 'Alma', 85);",
+    "options": {
+      "a": "обновление данных в таблице student",
+      "b": "удаление данных из таблицы student",
+      "c": "добавление новой записи в таблицу student",
+      "d": "создание новой таблицы student",
+      "e": "удаление таблицы student из базы данных"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Назначение команды delete from student where id=2;",
+    "options": {
+      "a": "добавление новой строки в таблицу student",
+      "b": "изменение столбца id в таблице student",
+      "c": "удаление строки с id=2 из таблицы student",
+      "d": "создание новой таблицы",
+      "e": "удаление всех строк из таблицы student"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Что делает команда update student set grade=100 where name='Alina';",
+    "options": {
+      "a": "удаляет студента по имени Alina",
+      "b": "изменяет поле grade на 100 для студента с именем Alina",
+      "c": "добавляет нового студента с именем Alina и grade=100",
+      "d": "ничего не делает",
+      "e": "меняет имя всех студентов на Alina"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Зачем используется команда create table student (id int, name varchar(20), grade int);",
+    "options": {
+      "a": "для удаления таблицы student",
+      "b": "для создания новой таблицы student с тремя столбцами: id, name, grade",
+      "c": "для добавления столбца в таблицу student",
+      "d": "для обновления таблицы student",
+      "e": "для вставки строк в таблицу student"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Какой результат выполнения следующего запроса: select avg(grade) from student; (На изображении приведены оценки студентов: 85, 90, 75, 100.)",
+    "options": {
+      "a": "90",
+      "b": "75",
+      "c": "100",
+      "d": "85",
+      "e": "95",
+      "f": "80",
+      "g": "82,5"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Действие команды sum (sales)",
+    "options": {
+      "a": "вывод минимума строки sales",
+      "b": "вывод среднего значения столбца sales",
+      "c": "вывод среднего значения строки sales",
+      "d": "вывод суммы столбца sales",
+      "e": "вывод среднего значения переменной sales",
+      "f": "вывод среднего значения таблицы sales"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Правильный результат выполнения SQL-запроса: select salary from table where city = 'Almaty'; Исходная таблица: name city salary Aigerim Almaty 50 Bauyrzhan Almaty 60 Gulzhan Arkalyk 70 Samat Moscow 80",
+    "options": {
+      "a": "50, 60",
+      "b": "60, 70, 80",
+      "c": "50, 60, 70, 80",
+      "d": "60, 70, 80",
+      "e": "70",
+      "f": "50"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Применить функцию агрегации avg к следующему массиву данных: {1, 5, 6, 7, 8, 3, 10, 0}",
+    "options": {
+      "a": "40",
+      "b": "42",
+      "c": "5",
+      "d": "41",
+      "e": "7",
+      "f": "43"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Какой SQL-запрос выберет сотрудников с самой высокой зарплатой?",
+    "options": {
+      "a": "select * from employee where salary = (select max(salary) from employee);",
+      "b": "select * from employee where salary = min(salary);",
+      "c": "select * from employee where salary > avg(salary);",
+      "d": "select * from employee where salary < max(salary);",
+      "e": "select employee, max(salary) from employee;",
+      "f": "select salary from employee where max(salary);"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Результат выполнения запроса: select min(score) from exam;",
+    "options": {
+      "a": "минимальное значение столбца score",
+      "b": "максимальное значение столбца score",
+      "c": "среднее значение столбца score",
+      "d": "сумма значений столбца score",
+      "e": "количество строк в таблице exam",
+      "f": "максимальное значение id"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Какой оператор используется для объединения результатов двух SELECT-запросов без дублирования строк?",
+    "options": {
+      "a": "JOIN",
+      "b": "UNION",
+      "c": "INTERSECT",
+      "d": "DISTINCT",
+      "e": "COMBINE",
+      "f": "INTERVAL"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Какой SQL-запрос вычисляет количество строк в таблице student?",
+    "options": {
+      "a": "select sum(*) from student;",
+      "b": "select total(*) from student;",
+      "c": "select count(*) from student;",
+      "d": "select rows(*) from student;",
+      "e": "select count(id) from student;",
+      "f": "select number(*) from student;"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Декомпозиция таблицы подразумевает",
+    "options": {
+      "a": "удаление с таблицы неинформативных данных",
+      "b": "группировка 2 или более таблиц",
+      "c": "разделение таблицы на 2 или более таблиц",
+      "d": "объединение 2 или более таблиц",
+      "e": "обновление таблицы",
+      "f": "применение команды decompose"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Выражение, описывающее декомпозицию",
+    "options": {
+      "a": "if a→b*y, then a→b and a→y",
+      "b": "if a→b*y, then a→b or a→y",
+      "c": "if a→b*y, then a→b and a≠y",
+      "d": "if a→b*y, then a→b and a→-y",
+      "e": "if a→b*y, then a→b and a→y",
+      "f": "if a→by, then a→b and a→by"
+    },
+    "correct_answer": "b,e"
+  },
+  {
+    "question": "Результат выполнения следующей команды: create table calc (x int, y int); insert into calc values (5, 45); select * from calc x, y, x*y;",
+    "options": {
+      "a": "1",
+      "b": "5, 45",
+      "c": "45",
+      "d": "50",
+      "e": "5",
+      "f": "225",
+      "g": "5, 45, 50",
+      "h": "5, 45, 50"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Расширения файлов БД",
+    "options": {
+      "a": ".xls, .txt",
+      "b": ".mov, .mp3",
+      "c": ".sql, .acs",
+      "d": ".ppt, .sql",
+      "e": ".data, .bmp",
+      "f": ".cdr, .sql",
+      "g": ".txt, .jpg"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Типы данных, используемые в SQL",
+    "options": {
+      "a": "booleans",
+      "b": "data",
+      "c": "rows",
+      "d": "character",
+      "e": "columns",
+      "f": "integer",
+      "g": "information"
+    },
+    "correct_answer": "a,d,f"
+  },
+  {
+    "question": "Следующая таблица отвечает каким требованиям нормализации? Компания | Марка Toyota | Corolla, Camry Mercedes Benz | 220",
+    "options": {
+      "a": "3 НФ",
+      "b": "НФ Бойс-Кодда",
+      "c": "4 НФ",
+      "d": "2 НФ",
+      "e": "ни в какой из перечисленных",
+      "f": "1 НФ",
+      "g": "6 НФ",
+      "h": "5 НФ"
+    },
+    "correct_answer": "f"
+  },
+  {
+    "question": "Вывести на экран номер сотрудника, не являющегося руководителем отдела и получающего зарплату, равную зарплате какого-либо руководителя отдела",
+    "options": {
+      "a": "select emp_no from emp where emp_no not in (select dept_mng from dept) or emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "b": "select emp_no, name from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "c": "select emp_no from emp where emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "d": "select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)",
+      "e": "select emp_no from emp where emp_no not in (select dept_mng from dept)",
+      "f": "select * from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Названия столбцов в следующем коде: Insert into data (id, name, table)",
+    "options": {
+      "a": "into",
+      "b": "table",
+      "c": "name",
+      "d": "insert",
+      "e": "id",
+      "f": "нет названия столбцов",
+      "g": "data",
+      "h": "insert, into, data, id, name, table"
+    },
+    "correct_answer": "b,c,e"
+  },
+  {
+    "question": "Выберите SQL-запрос, который выбирает всех студентов из таблицы student, у которых балл выше среднего.",
+    "options": {
+      "a": "select * from student where grade >= avg(grade);",
+      "b": "select * from student where grade > (select avg(grade) from student);",
+      "c": "select grade from student where grade > avg(grade);",
+      "d": "select * from student where avg(grade) > grade;",
+      "e": "select name, grade from student where grade > avg(grade);"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Какой SQL-запрос вычисляет сумму всех зарплат в таблице employee?",
+    "options": {
+      "a": "select * from employee salary;",
+      "b": "select sum(salary) from employee;",
+      "c": "select salary from employee;",
+      "d": "sum select salary from employee;",
+      "e": "select sum(employee) from salary;",
+      "f": "select salary sum from employee;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Определите команду, которая увеличивает значение salary в 2 раза для всех строк таблицы employee.",
+    "options": {
+      "a": "update employee set salary = salary * 2;",
+      "b": "set employee salary = salary * 2;",
+      "c": "update set salary = salary * 2 employee;",
+      "d": "change employee set salary = salary * 2;",
+      "e": "select salary*2 from employee;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Какой SQL-запрос выбирает всех студентов с именем \"Алину\" из таблицы student?",
+    "options": {
+      "a": "select * from student where name = 'Alina';",
+      "b": "select student where name = 'Alina';",
+      "c": "select * from student name = 'Alina';",
+      "d": "select * student where name = 'Alina';",
+      "e": "select name = 'Alina' from student;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает SQL-команда select count(*) from student;",
+    "options": {
+      "a": "вычисляет средний балл студентов",
+      "b": "возвращает количество студентов",
+      "c": "выбирает всех студентов с заданной фамилией",
+      "d": "выбирает студентов с максимальным баллом",
+      "e": "возвращает сумму всех баллов",
+      "f": "вставляет новую запись в таблицу",
+      "g": "выбирает имя студента с id=1"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Какой SQL-запрос выберет студентов с баллом выше 80?",
+    "options": {
+      "a": "select * from student where grade < 80;",
+      "b": "select * from student where grade > 80;",
+      "c": "select * from student where mark > 80;",
+      "d": "select grade > 80 from student;",
+      "e": "select * student where grade = 80;",
+      "f": "select * from student;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Что делает команда delete from student where name='Ayan';",
+    "options": {
+      "a": "добавляет нового студента с именем 'Ayan'",
+      "b": "удаляет все записи из таблицы student",
+      "c": "удаляет студента с именем 'Ayan'",
+      "d": "обновляет оценку студента 'Ayan'",
+      "e": "выбирает студента 'Ayan'",
+      "f": "создаёт таблицу student"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Какой SQL-запрос возвращает всех студентов, у которых оценки между 80 и 100 (включительно)?",
+    "options": {
+      "a": "select * from student where grade > 80 and grade < 100;",
+      "b": "select * from student where grade >= 80 and grade <= 100;",
+      "c": "select * from student where grade > 80 or grade < 100;",
+      "d": "select * from student where grade = 80 or grade = 100;",
+      "e": "select * from student where grade between 80 and 100;",
+      "f": "select * from student;"
+    },
+    "correct_answer": "b,e"
+  },
+  {
+    "question": "Какой SQL-запрос вернёт фамилии всех студентов с оценкой выше 80?",
+    "options": {
+      "a": "select фамилия from student where grade > 80;",
+      "b": "select name from student where grade < 80;",
+      "c": "select фамилии from student where grade > 80;",
+      "d": "select grade from student where фамилия > 80;",
+      "e": "select фамилия from student where grade = 80;",
+      "f": "select фамилия from student where grade >= 80;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает команда select min(grade) from student;",
+    "options": {
+      "a": "возвращает максимальную оценку",
+      "b": "возвращает сумму всех оценок",
+      "c": "возвращает минимальную оценку",
+      "d": "возвращает среднюю оценку",
+      "e": "возвращает количество оценок",
+      "f": "удаляет все оценки"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "SQL-запрос для увеличения всех баллов на 5:",
+    "options": {
+      "a": "add grade = grade + 5 to student;",
+      "b": "update student set grade = grade + 5;",
+      "c": "select grade + 5 from student;",
+      "d": "change grade = grade + 5 from student;",
+      "e": "set student grade = grade + 5;",
+      "f": "update set grade = grade + 5 student;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Применить функцию агрегации sum к следующему массиву данных {1, 5, 6, 7, 8, 3, 11}",
+    "options": {
+      "a": "41",
+      "b": "43",
+      "c": "40",
+      "d": "42",
+      "e": "5,85",
+      "f": "7"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает команда select max(grade) from student;",
+    "options": {
+      "a": "возвращает максимальную оценку",
+      "b": "возвращает минимальную оценку",
+      "c": "возвращает все оценки",
+      "d": "возвращает среднее значение оценки",
+      "e": "удаляет оценки",
+      "f": "возвращает сумму всех оценок"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Какая команда SQL вернёт только уникальные значения фамилий студентов?",
+    "options": {
+      "a": "select имя from student;",
+      "b": "select уникальные from student;",
+      "c": "select фамилия from student unique;",
+      "d": "select distinct фамилия from student;",
+      "e": "select only фамилия from student;",
+      "f": "select фамилия from student limit 1;"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Что произойдёт после выполнения SQL-команды update student set grade=grade+10 where name='Alina';",
+    "options": {
+      "a": "всем студентам установится grade=10",
+      "b": "всем студентам с именем Alina оценка увеличится на 10",
+      "c": "ни одна оценка не изменится",
+      "d": "всем студентам оценка увеличится на 10",
+      "e": "все оценки станут равны 10"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Что делает команда select avg(grade) from student;",
+    "options": {
+      "a": "возвращает сумму всех оценок",
+      "b": "возвращает среднюю оценку",
+      "c": "возвращает количество записей",
+      "d": "возвращает максимальную оценку",
+      "e": "удаляет оценки",
+      "f": "возвращает минимальную оценку"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Что делает следующий SQL-запрос? select max(salary) from employee;",
+    "options": {
+      "a": "возвращает минимальную зарплату",
+      "b": "возвращает сумму всех зарплат",
+      "c": "возвращает среднюю зарплату",
+      "d": "возвращает максимальную зарплату",
+      "e": "возвращает количество сотрудников",
+      "f": "возвращает имена сотрудников"
+    },
+    "correct_answer": "d"
+  },
+  {
+    "question": "Что делает команда select min(score) from results;",
+    "options": {
+      "a": "возвращает количество результатов",
+      "b": "возвращает максимальный балл",
+      "c": "возвращает минимальный балл",
+      "d": "возвращает средний балл",
+      "e": "возвращает сумму баллов",
+      "f": "ничего не делает"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Что делает команда select count(*) from exam where score > 50;",
+    "options": {
+      "a": "возвращает суммы всех баллов, больше 50",
+      "b": "возвращает минимальный балл больше 50",
+      "c": "возвращает количество записей с баллом больше 50",
+      "d": "возвращает название экзаменов с баллом больше 50",
+      "e": "создаёт новую строку",
+      "f": "удаляет все записи с баллом < 50"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "SQL-запрос для вычисления суммы баллов всех студентов в таблице student:",
+    "options": {
+      "a": "select max(grade) from student;",
+      "b": "select sum(grade) from student;",
+      "c": "select add(grade) from student;",
+      "d": "select grades from student;",
+      "e": "select avg(grade) from student;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "SQL-запрос для вычисления количества уникальных городов в таблице students:",
+    "options": {
+      "a": "select count(city) from students;",
+      "b": "select distinct city from students;",
+      "c": "select count(distinct city) from students;",
+      "d": "select sum(city) from students;",
+      "e": "select unique(city) from students;",
+      "f": "select city from students;"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "SQL-запрос для выбора всех студентов с именем \"Дана\" и баллом не ниже 90?",
+    "options": {
+      "a": "select * from student where name='Дана' and grade>=90;",
+      "b": "select * from student where name='Дана' or grade>=90;",
+      "c": "select * from student where name='Дана' and grade>90;",
+      "d": "select * from student where name='Дана' and grade<=90;",
+      "e": "select student where grade>=90;",
+      "f": "select * from student where name='Дана';"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает команда select city, count(*) from students group by city;",
+    "options": {
+      "a": "возвращает список всех городов",
+      "b": "подсчитывает студентов в каждом городе",
+      "c": "суммирует количество городов",
+      "d": "выводит только уникальные города",
+      "e": "выводит общее число городов",
+      "f": "удаляет города с малым количеством студентов"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "SQL-запрос для выбора всех студентов с баллом равен максимальному в таблице:",
+    "options": {
+      "a": "select * from student where grade = (select max(grade) from student);",
+      "b": "select * from student where grade > avg(grade);",
+      "c": "select * from student where grade > max(grade);",
+      "d": "select * from student where grade = min(grade);",
+      "e": "select name, grade from student where grade = max(grade);"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Команда, которая изменяет значение столбца city на 'Astana' для всех студентов, у которых сейчас указано 'Almaty':",
+    "options": {
+      "a": "update students set city='Astana' where city='Almaty';",
+      "b": "set students city='Astana' where city='Almaty';",
+      "c": "change city='Astana' from students where city='Almaty';",
+      "d": "update students city='Astana' where city='Almaty';",
+      "e": "update set city='Astana' students where city='Almaty';"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает SQL-команда select avg(grade) from students where city='Astana';",
+    "options": {
+      "a": "выводит среднюю оценку всех студентов",
+      "b": "выводит суммарный балл студентов из города Astana",
+      "c": "считает средний балл только среди студентов из города Astana",
+      "d": "выводит всех студентов, у которых город Astana",
+      "e": "считает среднее количество студентов в Astana"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Запрос на выбор фамилий студентов из группы 1 с оценками выше 80:",
+    "options": {
+      "a": "select фамилия from students where group=1 and grade>80;",
+      "b": "select фамилия from students where grade>80;",
+      "c": "select фамилия from students where group=1 or grade>80;",
+      "d": "select * from students where group=1 and grade>80;",
+      "e": "select фамилия, group from students where grade>80;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает команда update students set grade=grade-5 where city='Astana';",
+    "options": {
+      "a": "уменьшает оценки всех студентов на 5 баллов",
+      "b": "уменьшает оценки всех студентов из Astana на 5 баллов",
+      "c": "устанавливает всем студентам из Astana оценку 5",
+      "d": "увеличивает оценки на 5 баллов у всех",
+      "e": "ничего не делает"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Применить функцию агрегации sum к следующему массиву данных {2, 4, 6, 8, 10}",
+    "options": {
+      "a": "20",
+      "b": "24",
+      "c": "30",
+      "d": "32",
+      "e": "25",
+      "f": "28"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Применить функцию агрегации avg к следующему массиву данных {8, 6, 4, 2, 0}",
+    "options": {
+      "a": "4",
+      "b": "5",
+      "c": "6",
+      "d": "8",
+      "e": "2",
+      "f": "7"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Применить функцию агрегации max к следующему массиву данных {1, 3, 5, 7, 9}",
+    "options": {
+      "a": "9",
+      "b": "7",
+      "c": "5",
+      "d": "1",
+      "e": "3",
+      "f": "0"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Применить функцию агрегации min к следующему массиву данных {2, 5, 8, 11, 14}",
+    "options": {
+      "a": "2",
+      "b": "5",
+      "c": "8",
+      "d": "11",
+      "e": "14",
+      "f": "0"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Результат выполнения SQL-запроса select count(distinct grade) from student;",
+    "options": {
+      "a": "количество уникальных оценок",
+      "b": "сумма оценок",
+      "c": "максимальная оценка",
+      "d": "количество всех записей",
+      "e": "минимальная оценка",
+      "f": "количество студентов"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "SQL-запрос для получения максимального балла среди студентов из города Astana:",
+    "options": {
+      "a": "select max(city) from students where city='Astana';",
+      "b": "select max(grade) from students where city='Astana';",
+      "c": "select grade from students where city='Astana';",
+      "d": "select city=max(grade) from students;",
+      "e": "select max(grade) from students;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Что делает SQL-запрос select min(grade) from students where city='Almaty';",
+    "options": {
+      "a": "находит максимальную оценку по Алматы",
+      "b": "выбирает всех студентов из Алматы",
+      "c": "возвращает минимальную оценку среди студентов из Алматы",
+      "d": "считает количество студентов из Алматы",
+      "e": "удаляет записи из Алматы"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Присвоить всем студентам с городом 'Almaty' значение grade=100:",
+    "options": {
+      "a": "update students set city = 'Almaty' where grade = 100;",
+      "b": "update students set grade = 100 where city = 'Almaty';",
+      "c": "update students grade = 100 where city = 'Almaty';",
+      "d": "set grade = 100 from students where city = 'Almaty';",
+      "e": "update set grade = 100 where city = 'Almaty' students;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "SQL-запрос для подсчёта количества студентов с уникальными фамилиями в таблице students:",
+    "options": {
+      "a": "select count(surname) from students;",
+      "b": "select count(*) from students;",
+      "c": "select count(distinct surname) from students;",
+      "d": "select distinct surname from students;",
+      "e": "select unique surname from students;",
+      "f": "select sum(surname) from students;"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "SQL-запрос, который возвращает средний балл студентов из города 'Astana':",
+    "options": {
+      "a": "select avg(grade) from students where city='Astana';",
+      "b": "select avg(grade) from students;",
+      "c": "select city, avg(grade) from students group by city='Astana';",
+      "d": "select grade from students where city='Astana';",
+      "e": "select avg(city) from students where grade='Astana';"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "SQL-запрос, выбирающий все записи студентов с оценкой выше 75 и городом \"Almaty\":",
+    "options": {
+      "a": "select * from students where grade > 75;",
+      "b": "select * from students where city = 'Almaty';",
+      "c": "select * from students where grade > 75 and city = 'Almaty';",
+      "d": "select city from students where grade > 75;",
+      "e": "select * from students where grade < 75 and city = 'Almaty';"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "SQL-запрос для вывода наибольшей зарплаты из таблицы employee:",
+    "options": {
+      "a": "select max(salary) from employee;",
+      "b": "select salary from employee;",
+      "c": "select max(employee) from salary;",
+      "d": "select salary where max from employee;",
+      "e": "select max from employee salary;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "SQL-запрос, возвращающий количество студентов с уникальными именами:",
+    "options": {
+      "a": "select count(name) from students;",
+      "b": "select count(distinct name) from students;",
+      "c": "select unique name from students;",
+      "d": "select count(*) from students;",
+      "e": "select sum(name) from students;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "SQL-запрос для увеличения на 10 всех оценок студентов с городом \"Astana\":",
+    "options": {
+      "a": "update students set grade=grade+10;",
+      "b": "update students set grade=10 where city='Astana';",
+      "c": "update students set grade=grade+10 where city='Astana';",
+      "d": "set grade=grade+10 for students where city='Astana';",
+      "e": "update grade set students=grade+10 where city='Astana';"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "SQL-запрос для нахождения средней оценки среди студентов из города \"Almaty\":",
+    "options": {
+      "a": "select avg(grade) from students;",
+      "b": "select avg(grade) from students where city='Almaty';",
+      "c": "select grade from students where city='Almaty';",
+      "d": "select avg(city) from students where grade='Almaty';",
+      "e": "select avg(grade) where city='Almaty' from students;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "SQL-запрос, который уменьшает на 15 баллов оценки всех студентов с фамилией \"Иванов\":",
+    "options": {
+      "a": "update students set grade=grade-15 where surname='Иванов';",
+      "b": "update students set grade=15 where surname='Иванов';",
+      "c": "update students set surname='Иванов' where grade=grade-15;",
+      "d": "update students grade=grade-15 where surname='Иванов';",
+      "e": "update grade set grade=grade-15 where surname='Иванов';"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Что делает команда update employers set salary = salary * 1.2;",
+    "options": {
+      "a": "Вычисляет среднее значение зарплаты.",
+      "b": "Увеличивает зарплату всех работников на 20%",
+      "c": "Устанавливает зарплату равной 1.2",
+      "d": "Увеличивает зарплату только по условию",
+      "e": "Удаляет работников с зарплатой менее 1.2"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Как увеличить зарплату на 20% только для тех, у кого зарплата менее 80,000?",
+    "options": {
+      "a": "update employers set salary = salary * 1.2 where salary < 80000;",
+      "b": "update employers set salary = salary + 80000;",
+      "c": "update employers salary = salary * 1.2 from employers where salary < 80000;",
+      "d": "set employers salary = salary * 1.2 and salary < 80000;",
+      "e": "update employers set salary = salary * 0.8 where salary > 80000;"
+    },
+    "correct_answer": "a"
+  },
+  {
+    "question": "Команда, которая присваивает всем сотрудникам зарплату, равную средней по таблице employers:",
+    "options": {
+      "a": "update employers set salary = avg(salary);",
+      "b": "update employers set salary = (select avg(salary) from employers);",
+      "c": "update set salary = (select avg(salary) from employers);",
+      "d": "update employers salary = avg(salary);",
+      "e": "set salary = avg(salary) from employers;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "Как выбрать всех работников, у которых зарплата равна максимальной в таблице employers?",
+    "options": {
+      "a": "select * from employers where salary = max(salary);",
+      "b": "select * from employers where salary = (select max(salary) from employers);",
+      "c": "select max(salary) from employers;",
+      "d": "select * from employers max salary;",
+      "e": "select salary from employers where salary = max;"
+    },
+    "correct_answer": "b"
+  },
+  {
+    "question": "SQL-запрос, выбирающий всех работников с зарплатой в диапазоне от 50,000 до 100,000 включительно:",
+    "options": {
+      "a": "select * from employers where salary = 50000 and salary = 100000;",
+      "b": "select * from employers where salary > 50000 and salary < 100000;",
+      "c": "select * from employers where salary between 50000 and 100000;",
+      "d": "select * from employers salary = (50000,100000);",
+      "e": "select salary from employers where salary between 50000 and 100000;"
+    },
+    "correct_answer": "c"
+  },
+  {
+    "question": "Что делает команда delete from employers where salary = (select min(salary) from employers);",
+    "options": {
+      "a": "удаляет всех работников",
+      "b": "удаляет работников с самой низкой зарплатой",
+      "c": "удаляет работников с максимальной зарплатой",
+      "d": "назначает минимальную зарплату всем сотрудникам",
+      "e": "не выполняет никаких действий"
+    },
+    "correct_answer": "b"
+  }
+]

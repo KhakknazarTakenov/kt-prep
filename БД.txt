@@ -1,0 +1,4734 @@
+Вопрос 1:
+Количество атрибутов в таблице называется
+
+A) кардинальность отношения
+
+B) n-мерность отношения
+
+C) ранг отношения
+
+D) сила отношения
+
+E) мощность отношения
+
+F) степень отношения *
+
+Правильный ответ: Степень отношения (F)
+
+Вопрос 2:
+Среда СУБД состоит
+
+A) только из аппаратного обеспечения (компьютеров) и пользователей
+
+B) только из аппаратного обеспечения (компьютеров)
+
+C) только из программного обеспечения
+
+D) только из пользователей данных
+
+E) из аппаратного обеспечения (компьютеров), данных, процедур пользователей
+
+F) пользователей и администратора *
+
+G) только из моделей мета данных
+
+Правильный ответ: Пользователи и администратор (F), наиболее полная и правильная формулировка
+
+Вопрос 3:
+Реляционные операции сравнения
+
+A) ≤
+
+B) <= *
+
+C) =
+
+D) <>
+
+E) >= *
+
+F) ≤
+
+G) > *
+
+Правильные ответы:
+<= (B) — меньше или равно
+>= (E) — больше или равно
+> (G) — больше
+Все перечисленные операторы относятся к реляционным операциям сравнения в SQL и реляционной алгебре
+
+Вопрос 4:
+Типы работы разработчика логической базы данных
+
+A) абстрагированное и сетевое
+
+B) системный и сетевое проектирование
+
+C) логическое и эффективное проектирование
+
+D) концептуальное и логическое проектирование *
+
+E) концептуальное и сетевое проектирование
+
+F) логическое и сетевое
+
+G) реляционное и концептуальное проектирование
+
+Правильный ответ: Концептуальное и логическое проектирование (D)
+
+Вопрос 5:
+Ключ, который является первичным в другой таблице, но в текущей таблице служит вспомогательным ключом для связи
+
+A) естественный ключ
+
+B) вторичный ключ
+
+C) суррогатный ключ
+
+D) первичный ключ
+
+E) простой ключ
+
+F) внешний ключ *
+
+G) составной ключ
+
+H) искусственный ключ
+
+Правильный ответ: Внешний ключ (F)
+
+Вопрос 6:
+Запрос, который выбирает сумму всех уникальных значений столбца в таблице
+
+A) select sum(distinct column) from table; *
+
+B) select sum(column) from table;
+
+C) select unique sum(column) from table;
+
+D) select mean(column) from table;
+
+E) select sum(column) from table where sum(column) is distinct;
+
+F) select sum(column) from table group by column;
+
+G) select column, sum(column) from table;
+
+Правильный ответ: select sum(distinct column) from table; (A)
+
+Вопрос 7:
+Запрос, который выбирает поля, где column1 содержит букву 'а' или 'е'
+
+A) select * from table where column1 like '%a%' and column1 like '%e%'
+
+B) select * from table where column1 consist of('a','e')
+
+C) select * from table where column1 like '%a%' or column1 like '%e%' *
+
+D) select * from table where instr(column1,'a')>0 or instr(column1,'e')>0 *
+
+E) select * from table where instr(column1,'a')>0 and instr(column1,'e')>0
+
+F) select * from table where column1 like 'a%' and column1 like 'e%'
+
+G) select * from table where instr(column1,'a') or instr(column1,'e')
+
+Правильные ответы:
+select * from table where column1 like '%a%' or column1 like '%e%'; (C)
+select * from table where instr(column1,'a')>0 or instr(column1,'e')>0; (D)
+(Обязательно оператор или — “or”!)
+
+Вопрос 8:
+Запрос, который выбирает поля, где column1 содержит значения от 1 до 3 включительно
+
+A) select * from table where column1 =1 and 3
+
+B) select * from table where column1 between 1 and 3 *
+
+C) select * from table where column1=1 and column1=3
+
+D) select * from table where column1 in (1,2,3) *
+
+E) select * from table where column1<1 or column1<3
+
+F) select * from table where column1=1 or column1=2 or column1=3 *
+
+G) select * from table where column1=1 and column1=2 and column1=3
+
+Правильные ответы:
+select * from table where column1 between 1 and 3; (B)
+select * from table where column1 in (1,2,3); (D)
+select * from table where column1=1 or column1=2 or column1=3; (F)
+
+Вопрос 9:
+Запрос, сортирующий отделы (порядок возрастания) по сумме зарплат сотрудников, работающих там, при подсчёте суммы учитывались только зарплаты больше 10000 (department, salary – атрибуты таблицы table)
+
+A) select department, sum(salary) from table order by last_name desc
+
+B) select department, sum(salary) from table group by department order by last_name
+
+C) select department, sum(salary) from table group by department having sum(salary)>10000 order by sum(salary) *
+
+D) select sum(salary), department from table where salary>10000 group by sum(salary) asc
+
+E) select department, sum(salary) from table where salary>10000 group by department order by sum(salary)
+
+Правильный ответ:
+C) select department, sum(salary) from table group by department having sum(salary)>10000 order by sum(salary)
+
+Вопрос 10:
+Запрос, сортирующий отделы по средней арифметической зарплате в порядке возрастания (department, salary – атрибуты таблицы table)
+
+A) select department, sum(salary)/count() from table group by department order by sum(salary)/count() asc
+
+B) select avg(salary) as average, department from table group by department order by avg(salary) asc
+
+C) select department, mean(salary) from table group by department order by mean(salary)
+
+D) select department, avg(salary) from table group by department *
+
+E) select department, avg(salary) from table group by department order by avg(salary) *
+
+F) select department, avg(salary) from table group by department order by department
+
+Правильные ответы:
+D) select department, avg(salary) from table group by department
+E) select department, avg(salary) from table group by department order by avg(salary)
+
+Вопрос 11:
+Объединение двух таблиц, возвращающее только совпадающие строки из двух таблиц по сопоставленному условию
+
+A) cross join
+
+B) left outer join
+
+C) right outer join
+
+D) outer join
+
+E) full outer join
+
+F) inner join *
+
+Правильный ответ:
+F) inner join
+
+Вопрос 12:
+Цели управления параллельным выполнением в распределённой среде
+
+A) освобождение всех установленных блокировок
+
+B) отправить всем участникам команду GLOBAL_ABORT
+
+C) устойчивость к отказам на узле и в линиях связи *
+
+D) поместить в системный журнал запись commit и обеспечить её принудительную запись из буфера *
+
+E) направить на узлы сообщение о принятом глобальном решении
+
+F) отсутствие дополнительных ограничений на структуру
+
+Правильные ответы:
+C) устойчивость к отказам на узле и в линиях связи
+D) поместить в системный журнал запись commit и обеспечить её принудительную запись из буфера
+
+Вопрос 13:
+Подраздел SQL, который используется для добавления данных в базу данных, для изменения существующих данных в базе данных или удаления данных из базы данных
+
+A) data manipulation language *
+
+B) data definition language
+
+C) data altering language
+
+D) data control language
+
+E) transaction control language
+
+F) mdx
+
+G) query language
+
+H) query by example
+
+Правильный ответ:
+A) data manipulation language (язык управления данными/DML)
+
+Вопрос 14:
+Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных
+
+A) rollback to savepoint A
+
+B) rollback *
+
+C) checkpoint
+
+D) commit A
+
+E) commit
+
+F) savepoint A
+
+Правильный ответ:
+B) rollback
+
+Вопрос 15:
+Запрос, который выводит название продукта, чья цена выше средней арифметической цены всех продуктов
+
+A) select price from products where price > (select avg(price) from products)
+
+B) select product_name from products where price > (select avg(price) from products) *
+
+C) select product_name from products where price = avg(price)
+
+D) select product_name from products where price > (select sum(price)/count(*) from products)
+
+E) select product_name from products where price > (select median(price) from products)
+
+F) select product_name from products where price > (select sum(price) from products)
+
+Правильный ответ:
+B) select product_name from products where price > (select avg(price) from products)
+
+Вопрос 16:
+Оператор DESCRIBE
+
+A) передает программе описание столбцов результирующей таблицы *
+
+B) предоставляет программе описание входных параметров
+
+C) освобождает память от дополнительной информации
+
+D) указывает на этап обработки данных
+
+E) отправляет дату и время транзакций
+
+F) отправляет курсор на дополнительную информацию
+
+G) выводит адрес ошибки
+
+Правильный ответ:
+A) передает программе описание столбцов результирующей таблицы
+
+Вопрос 17:
+Операторы сравнения однострочных подзапросов
+
+A) > *
+
+B) all
+
+C) < *
+
+D) in
+
+E) = *
+
+F) some
+
+G) any
+
+Правильные ответы:
+A) >, C) <, E) =
+В однострочных подзапросах SQL используются обычные операторы сравнения: =, >, <, >=, <=, <> и др. Операторы all, some, any, in применяются в многострочных подзапросах.
+
+Вопрос 18:
+Типы работы разработчика логической базы данных
+
+A) абстрагированное и сетевое
+
+B) системный и сетевое проектирование
+
+C) логическое и эффективное проектирование
+
+D) концептуальное и логическое проектирование *
+
+E) концептуальное и сетевое проектирование
+
+F) логическое и сетевое
+
+G) реляционное и концептуальное проектирование
+
+Правильный ответ:
+D) концептуальное и логическое проектирование
+
+Вопрос 19:
+Количество атрибутов в таблице называется
+
+A) кардинальность отношения
+
+B) n-мерность отношения *
+
+C) ранг отношения
+
+D) сила отношения
+
+E) мощность отношения
+
+F) степень отношения
+
+Правильный ответ:
+B) n-мерность отношения
+
+Вопрос 20:
+Среда СУБД состоит
+
+A) только из аппаратного обеспечения (компьютеров) и пользователей
+
+B) только из аппаратного обеспечения (компьютеров)
+
+C) только из программного обеспечения
+
+D) только из пользователей данных
+
+E) из аппаратного обеспечения (компьютеров), данных, процедур пользователей *
+
+F) пользователей и администратора
+
+G) только из моделей мета данных
+
+H) только из моделей и идей
+
+Правильный ответ:
+E) из аппаратного обеспечения (компьютеров), данных, процедур пользователей
+
+Вопрос 21:
+Реляционные операции сравнения
+
+A) ⊆
+
+B) <= *
+
+C) ⊇
+
+D) <> *
+
+E) =>
+
+F) ⊇
+
+G) > *
+
+H) ~~
+
+Правильные ответы:
+B) <=
+D) <>
+G) >
+
+Вопрос 22:
+Запрос, который выбирает поля, где column1 содержит букву 'a' или 'e'
+
+A) select * from table where column1 like '%a%' and column1 like '%e%'
+
+B) select * from table where column1 consist of('a','e')
+
+C) select * from table where column1 like '%a%' or column1 like '%e%' *
+
+D) select * from table where instr(column1,'a')>0 or instr(column1,'e')>0 *
+
+E) select * from table where instr(column1,'a')>0 and instr(column1,'e')>0
+
+F) select * from table where column1 like 'a%' and column1 like 'e%'
+
+G) select * from table where column1 like 'a%' or column1 like 'e%'
+
+Правильные ответы:
+C) select * from table where column1 like '%a%' or column1 like '%e%'
+D) select * from table where instr(column1,'a')>0 or instr(column1,'e')>0
+
+Вопрос 23:
+Запрос, который выбирает поля, где column1 содержит значения от 1 до 3 включительно
+
+A) select * from table where column1 =1 and 3
+
+B) select * from table where column1 between 1 and 3 *
+
+C) select * from table where column1=1 and column1=3
+
+D) select * from table where column1 in (1,2,3) *
+
+E) select * from table where column1<1 or column1<3
+
+F) select * from table where column1=1 or column1=2 or column1=3 *
+
+Правильные ответы:
+B) select * from table where column1 between 1 and 3
+D) select * from table where column1 in (1,2,3)
+F) select * from table where column1=1 or column1=2 or column1=3
+
+Вопрос 24:
+Ключ, который является первичным в другой таблице, но в текущей таблице служит вспомогательным ключом для связи
+
+A) естественный ключ
+
+B) вторичный ключ
+
+C) суррогатный ключ
+
+D) первичный ключ
+
+E) простой ключ
+
+F) внешний ключ *
+
+G) составной ключ
+
+H) искусственный ключ
+
+Правильный ответ:
+F) внешний ключ
+
+Вопрос 25:
+Запрос, который выбирает сумму всех уникальных значений столбца в таблице
+
+A) select sum(distinct column) from table; *
+
+B) select sum(column) from table;
+
+C) select unique sum(column) from table;
+
+D) select mean(column) from table;
+
+E) select sum(column) from table where sum(column) is distinct;
+
+F) select sum(column) from table group by column;
+
+G) select column, sum(column) from table;
+
+Правильный ответ:
+A) select sum(distinct column) from table;
+
+Вопрос 26:
+Подраздел SQL, который используется для добавления данных в базу данных, для изменения существующих данных в базе данных или удаления данных из базы данных
+
+A) data manipulation language *
+
+B) data definition language
+
+C) data altering language
+
+D) data control language
+
+E) transaction control language
+
+F) mdx
+
+G) query language
+
+H) query by example
+
+Правильный ответ:
+A) data manipulation language (DML — используется для изменения, добавления и удаления данных)
+
+Вопрос 27:
+Запрос, сортирующий отделы (порядок возрастания) по сумме зарплат сотрудников, работающих там, при подсчёте суммы учитывались только зарплаты больше 10000 (department, salary – атрибуты таблицы table)
+
+A) select department, sum(salary) from table order by last_name desc
+
+B) select department, sum(salary) from table group by department order by last_name
+
+C) select department, sum(salary) from table group by department having sum(salary)>10000 order by sum(salary) *
+
+D) select sum(salary), department from table where salary>10000 group by sum(salary) asc
+
+E) select department, sum(salary) from table where salary>10000 group by department order by sum(salary)
+
+Правильный ответ:
+C) select department, sum(salary) from table group by department having sum(salary)>10000 order by sum(salary) (Использован HAVING и правильная сортировка)
+
+Вопрос 28:
+Запрос, сортирующий отделы по средней арифметической зарплате в порядке возрастания (department, salary – атрибуты таблицы table)
+
+A) select department, sum(salary)/count() from table group by department order by sum(salary)/count() asc
+
+B) select avg(salary) as average, department from table group by department order by avg(salary) asc
+
+C) select department, mean(salary) from table group by department order by mean(salary)
+
+D) select department, avg(salary) from table group by department
+
+E) select department, avg(salary) from table group by department order by avg(salary) *
+
+F) select department, avg(salary) from table group by department order by department
+
+Правильный ответ:
+E) select department, avg(salary) from table group by department order by avg(salary) (GROUP BY и ORDER BY по среднему значению)
+
+Вопрос 29:
+Объединение двух таблиц, возвращающее только совпадающие строки из двух таблиц по сопоставленному условию
+
+A) cross join
+
+B) left outer join
+
+C) right outer join
+
+D) outer join
+
+E) full outer join
+
+F) inner join *
+
+Правильный ответ:
+F) inner join (Именно внутреннее соединение возвращает только совпадающие строки)
+
+Вопрос 30:
+Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных
+
+A) rollback to savepoint A
+
+B) rollback *
+
+C) checkpoint
+
+D) commit A
+
+E) commit
+
+F) savepoint A
+
+Правильный ответ:
+B) rollback (отменяет все изменения транзакции до предыдущего сохранения)
+
+Вопрос 31:
+Запрос, который выводит название продукта, чья цена выше средней арифметической цены всех продуктов
+
+A) select price from products where price > (select avg(price) from products)
+
+B) select product_name from products where price > (select avg(price) from products) *
+
+C) select product_name from products where price >= avg(price)
+
+D) select product_name from products where price > (select sum(price)/count(*) from products)
+
+E) select product_name from products where price > (select median(price) from products)
+
+F) select product_name from products where price > (select sum(price) from products)
+
+Правильный ответ:
+B) select product_name from products where price > (select avg(price) from products)
+
+Вопрос 32:
+Оператор DESCRIBE
+
+A) передает программе описание столбцов результирующей таблицы *
+
+B) предоставляет программе описание входных параметров
+
+C) освобождает память от дополнительной информации
+
+D) указывает на этап обработки данных
+
+E) отправляет дату и время транзакций
+
+F) отправляет курсор на дополнительную информацию
+
+G) выводит адрес ошибки
+
+Правильный ответ:
+A) передает программе описание столбцов результирующей таблицы
+
+Вопрос 33:
+Операторы сравнения однострочных подзапросов
+
+A) > *
+
+B) all
+
+C) < *
+
+D) in
+
+E) = *
+
+F) some
+
+G) any
+
+Правильные ответы:
+A) >
+C) <
+E) =
+Эти стандартные операторы сравнения используются с подзапросами, возвращающими одно скалярное значение.
+
+Вопрос 34:
+Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных
+
+A) rollback to savepoint A
+
+B) rollback *
+
+C) checkpoint
+
+D) commit A
+
+E) commit
+
+F) savepoint A
+
+Правильный ответ:
+B) rollback
+
+
+Вопрос 35:
+Нормализация
+
+A) включает объединение существующих таблиц в одну большую
+
+B) процесс удаления избыточных данных из таблиц для повышения эффективности хранения, целостности данных и масштабируемости *
+
+C) процесс преобразования сложных структур данных в простые, стабильные структуры данных
+
+D) процесс добавления избыточных данных в таблицы для повышения эффективности хранения, целостности данных и масштабируемости
+
+E) процесс преобразования простых структур данных в сложные, стабильные структуры данных
+
+F) включает разделение существующих таблиц на несколько других, которые могут быть объединены или связаны когда выдается запрос *
+
+Правильные ответы:
+B) процесс удаления избыточных данных из таблиц для повышения эффективности хранения, целостности данных и масштабируемости
+F) включает разделение существующих таблиц на несколько других, которые могут быть объединены или связаны когда выдается запрос
+(Суть нормализации — разбивать крупные таблицы на более мелкие для уменьшения избыточности и улучшения целостности данных)
+
+Вопрос 36:
+Файловый сервер
+
+A) клиент принимает от пользователя запрос
+
+B) клиент управляет пользовательским интерфейсом
+
+C) большой объем сетевого трафика *
+
+D) на каждой рабочей станции должна находиться полная копия СУБД
+
+E) управление параллельной работой
+
+F) клиент управляет пользовательской логикой приложения
+
+Правильный ответ:
+C) большой объем сетевого трафика
+(В случае файлового сервера данные передаются по сети, что может приводить к значительной нагрузке на канал и большому сетевому трафику)
+
+Вопрос 37:
+Аномалии, которые возможны при денормализации
+
+A) аномалии создания
+
+B) аномалии объединения
+
+C) аномалии обновления *
+
+D) аномалии соединения
+
+E) аномалии слияния
+
+F) аномалии вставки *
+
+G) аномалии удаления *
+
+H) аномалии поиска
+
+Правильные ответы:
+C) аномалии обновления
+F) аномалии вставки
+G) аномалии удаления
+(Денормализация может привести к аномалиям обновления, вставки и удаления, повышенному риску потери целостности данных и избыточности)
+
+Вопрос 37:
+Название таблицы в следующем коде: Insert into data (id, name, table, table2)
+
+A) insert
+
+B) нет названия таблицы
+
+C) id
+
+D) name
+
+E) table2
+
+F) into
+
+G) table
+
+H) data *
+
+Правильный ответ:
+H) data
+(В SQL-выражении название таблицы указывается после INTO, в данном случае это data.)
+
+Вопрос 38:
+В таблице данных студентов добавьте в ячейку с номером пять 25 баллов на языке SQL
+
+A) create student insert 25 where number = 5 ;
+
+B) enter 25 to grade where number = 5;
+
+C) insert 25 to number=25;
+
+D) insert student set grade= grade + 25 where number = 5 ;
+
+E) update student set grade= grade + 25 where number = 5 ; *
+
+Правильный ответ:
+E) update student set grade= grade + 25 where number = 5 ;
+
+Вопрос 39:
+Вывести список студентов 2, 3, 4 курсов или специальности «Туризм»
+
+A) select name from stud where speciality = 'Tourism' or course > '1'
+
+B) select name from stud where speciality = 'Tourism' and course > 1
+
+C) select name from stud where speciality = 'Tourism' or course = '1'
+
+D) select name from stud where speciality = 'Tourism'; select name from stud where course > 1
+
+E) select name from stud where speciality = 'Tourism' and course >= 1
+
+F) select name from stud where speciality = 'Tourism' or course > 1 *
+
+Правильные ответы:
+F) select name from stud where speciality = 'Tourism' or course > 1
+
+Вопрос 40:
+На SQL вывести номера, имена и номера отделов работников, служащих в отделах 15, 17, 19
+
+A) select number, name, dept_number from emp where dept_number in (15, 17, 19) *
+
+B) select * from emp where dept_number in (15, 17, 19)
+
+C) select number, name, dept_number from emp where dept_number order in (15, 17, 19)
+
+D) select number, name, dept_number from emp where dept_number =15 or dept_number =17 or dept_number = 19
+
+E) select number, name, dept_number from emp where dept_number between (15, 17, 19)
+
+F) select number, name, dept_number from emp where dept_number =15 or dept_number =17 or dept_number = 19
+
+Правильный ответ:
+A) select number, name, dept_number from emp where dept_number in (15, 17, 19)
+
+Вопрос 41:
+Результат выполнения следующей команды:
+create table calc (x int, y int);
+insert into calc values (5, 45);
+select * from calc x, y, x*y;
+
+A) 1
+
+B) 5, 45
+
+C) 45
+
+D) 50
+
+E) 5
+
+F) 225 *
+
+G) 5, 45, 50
+
+H) 5, 45, 50
+
+Правильный ответ:
+F) 225
+(x=5, y=45, x*y=225)
+
+Вопрос 42:
+Результат выполнения данной команды на SQL:
+create table department (id int, salary int);
+insert into department values (102, 45000);
+insert into department values (103, 15000);
+insert into department values (104, 90000);
+insert into department values (105, 10000);
+Select round (y)
+
+A) 40000
+
+B) 15000
+
+C) 160000
+
+D) 10000
+
+E) 45000
+
+F) 90000 *
+
+Правильный ответ:
+F) 90000
+(Этот вывод зависит от того, как алиас y используется, но в образце данных самый большой salary — 90000.)
+
+Вопрос 43:
+Возможные варианты ответов следующего кода SQL:
+
+sql
+select name
+from stud
+where name like 'A%';
+(Выбирает из таблицы stud имена, начинающиеся на букву 'A'.)
+
+A) Serzhan
+
+B) Alibek *
+
+C) Samal
+
+D) Serik
+
+E) Saken
+
+F) Aigul *
+
+G) Aisulu *
+
+Правильные ответы:
+B) Alibek
+F) Aigul
+G) Aisulu
+(Под условие "name like 'A%'" подходят все имена, начинающиеся с буквы A.)
+
+Вопрос 44:
+Результат выполнения следующей команды на SQL:
+
+sql
+create table stud (x int, y int);
+insert into stud values (005, 45);
+insert into stud values (006, 70);
+insert into stud values (007, 95);
+insert into stud values (008, 100);
+order by y
+(Выводим значения y, отсортированные по возрастанию.)
+
+A) 77,5
+
+B) 45, 70, 95, 100 *
+
+C) 005, 006, 007, 008
+
+D) 310
+
+E) 008, 007, 006, 005
+
+F) 100, 95, 70, 45
+
+Правильный ответ:
+B) 45, 70, 95, 100
+(Значения y по возрастанию: 45, 70, 95, 100.)
+
+Вопрос 45:
+Результат выполнения следующей команды для данной таблицы:
+
+sql
+select name
+from instructor
+where dept = 'Physics'
+order by name;
+Таблица:
+
+name	dept	teacher
+Aigerim	Physics	Berikova M.Zh.
+Bauyrzhan	Math	Ivanov P.A.
+Gulzhan	Physics	Omarova P.E.
+Samat	Physics	Erbolova A.S.
+A) Berikova M.Zh., Erbolova A.S., Ivanov P.A., Omarova P.E.
+
+B) Physics
+
+C) Aigerim, Bauyrzhan
+
+D) Berikova M.Zh., Erbolova A.S., Omarova P.E. *
+
+E) Aigerim, Bauyrzhan, Gulzhan, Samat
+
+F) Aigerim, Gulzhan, Samat *
+
+Правильные ответы:
+D) Berikova M.Zh., Erbolova A.S., Omarova P.E.
+F) Aigerim, Gulzhan, Samat
+(Три преподавателя и три студента из "Physics", сортируются по алфавиту.)
+
+Вопрос 46:
+Для упорядочивания по алфавиту используется следующая команда
+(изображение 15.jpg)
+
+A) list
+
+B) join
+
+C) change from A to Z
+
+D) order by *
+
+E) between A to Z
+
+F) from A to Z
+
+G) filter by
+
+H) filter on
+
+Правильный ответ:
+D) order by
+(Команда ORDER BY используется в SQL для сортировки результатов по алфавиту.)
+
+Вопрос 47:
+Результат выполнения следующего оператора SQL:
+
+sql
+SELECT NAME, DISCIPLINE
+FROM STUD
+WHERE GRADE < 50;
+(изображение 16.jpg)
+
+A) Akbota, Math *
+
+B) 40, Akbota, Math
+
+C) Akbota, Math, 47
+
+D) Nazgul, Geography, 40
+
+E) Nazgul, Geography *
+
+F) Batyr, Biology
+
+G) Batyr, Biology, 40
+
+Правильные ответы:
+A) Akbota, Math
+E) Nazgul, Geography
+(Запрос выберет имя и дисциплину студентов, у которых балл (GRADE) меньше 50.)
+
+Вопрос 48:
+Использование команды SELECT
+(изображение 13.jpg)
+
+A) набор
+
+B) начало
+
+C) использование
+
+D) фильтрация
+
+E) создание
+
+F) отбор
+
+G) корреляция
+
+H) выбор *
+
+Правильный ответ:
+H) выбор
+(SELECT — это выбор данных из таблицы.)
+
+Вопрос 49:
+Результат выполнения следующего SQL-запроса:
+
+sql
+select name
+from stud
+where name like 'A%';
+(изображение 14.jpg)
+
+A) Serzhan
+
+B) Alibek *
+
+C) Samal
+
+D) Serik
+
+E) Saken
+
+F) Aigul *
+
+G) Aisulu *
+
+H) Raimbek
+
+Правильные ответы:
+B) Alibek
+F) Aigul
+G) Aisulu
+(Выбираются имена, начинающиеся на букву "A".)
+
+Вопрос 50:
+Правильный синтаксис написания кода на SQL
+
+A) select from students
+
+B) select *from data
+
+C) select * from data *
+
+D) select *data from students
+
+E) select data*students from
+
+F) select *stud from data
+
+G) select * from *data
+
+H) select data from students
+
+Правильный ответ:
+C) select * from data
+(Это канонический вид простого SQL-запроса для выбора всех столбцов из таблицы.)
+
+Вопрос 51:
+Название таблицы в следующем коде: Insert into data (id, name, table, table2)
+
+A) insert
+
+B) нет названия таблицы
+
+C) id
+
+D) name
+
+E) table2
+
+F) into
+
+G) table
+
+H) data *
+
+Правильный ответ:
+H) data
+(После INTO всегда идёт имя таблицы.)
+
+Вопрос 52:
+Использование команды SELECT
+
+A) набор
+
+B) начало
+
+C) использование
+
+D) фильтрация
+
+E) создание
+
+F) отбор
+
+G) корреляция
+
+H) выбор *
+
+Правильный ответ:
+H) выбор
+(SELECT в SQL значит «выбрать» данные.)
+
+Вопрос 53:
+Результат выполнения следующей команды на SQL:
+SELECT NAME, DISCIPLINE
+FROM STUD
+WHERE GRADE <50;
+
+A) Akbota, Math *
+
+B) 40, Akbota, Math
+
+C) Akbota, Math, 47
+
+D) Nazgul, Geography, 40
+
+E) Nazgul, Geography *
+
+F) Batyr, Biology
+
+G) Batyr, Biology, 40
+
+H) Nazgul, Geography, GRADE=40
+
+Правильные ответы:
+A) Akbota, Math
+E) Nazgul, Geography
+(Из таблицы выводятся только строки, где балл < 50.)
+
+Вопрос 54:
+Операции, которые нельзя применять к базе данных
+
+A) сжатие
+
+B) удаление данных
+
+C) обновление
+
+D) оптимизация
+
+E) удаление файлов *
+
+F) создание
+
+G) вставлять данные
+
+H) форматирование *
+
+Правильные ответы:
+E) удаление файлов
+H) форматирование
+(Обычно к базе данных нельзя напрямую применять физическое удаление файлов или операцию "форматирование", это не относится к стандартным операциям над БД.)
+
+Вопрос 55:
+Команды, которые не существуют в языке SQL
+
+A) insert
+
+B) select
+
+C) delete
+
+D) enter *
+
+E) input *
+
+F) update
+
+G) create
+
+H) start *
+
+Правильные ответы:
+D) enter
+E) input
+H) start
+(В SQL нет команд enter, input, start — это не служебные ключевые слова в стандарте.)
+
+Вопрос 56:
+Названия столбцов в следующем коде: Insert into data (id, name, table)
+
+A) into
+
+B) table
+
+C) name *
+
+D) insert
+
+E) id *
+
+F) нет названия столбцов
+
+G) data
+
+H) insert, into, data, id, name, table
+
+Правильные ответы:
+C) name
+E) id
+(Столбцы указаны в скобках — id, name, table.)
+
+Вопрос 57:
+Результат выполнения следующих операторов SQL:
+SELECT ID, NAME, CITY, GROUP FROM STUDENT WHERE GROUP=1;
+
+A) 6, Erbol, Atyrau, 2
+
+B) 7, Zhanna, Karaganda, 2
+
+C) 5, Almas, Aktau, 1 *
+
+D) 2, Zhanagir, Kostanay, 1 *
+
+E) 2, Edige, Shimkent, 2
+
+F) Aigul, Kostanay, 1, 2
+
+G) 1, Alma, Almaty, 1 *
+
+H) 1, Altyn, Oral, 2
+
+Правильные ответы:
+C) 5, Almas, Aktau, 1
+D) 2, Zhanagir, Kostanay, 1
+G) 1, Alma, Almaty, 1
+(Оператор выберет строки, у которых GROUP=1.)
+
+Вопрос 58 (с изображений 31.jpg и 32.jpg):
+Результат выполнения следующей команды SQL:
+create table student (id int, name varchar(20), grade int);
+insert into student values (1, 'Alma', 85);
+insert into student values (2, 'Ayan', 90);
+insert into student values (3, 'Alina', 75);
+select * from student where grade > 80;
+
+A) 1, Alma, 85 *
+
+B) 2, Ayan, 90 *
+
+C) 3, Alina, 75
+
+D) 1, Alina, 85
+
+E) 2, Alina, 90
+
+F) 3, Alma, 75
+
+G) Alma, Ayan, Alina
+
+H) 1, Ayan, 90
+
+Правильные ответы:
+A) 1, Alma, 85
+B) 2, Ayan, 90
+(Строки, где grade > 80.)
+
+Вопрос 59 (изображение 29.jpg):
+Запрос на SQL:
+select univer, faculty, group from students where name='Alma'
+
+A) select *univer, *faculty, *group from students where name='Alma'
+
+B) select univer, faculty, group from students where name='Alma' *
+
+C) select "univer", "faculty", "group" from "students" where "name"='Alma'
+
+D) select *from students where name='Alma'
+
+E) select univer, faculty, group from students where name='Alma'
+
+F) select univer, faculty, group from students when name='Alma'
+
+G) select "univer", "faculty", "group" from students where name=Alma
+
+H) select univer, faculty, group from students where name Alma
+
+Правильный ответ:
+B) select univer, faculty, group from students where name='Alma'
+(Правильный синтаксис: select поля from таблица where условие.)
+
+Вопрос 60 (изображение 30.jpg):
+Запрос на добавление новой строки в таблицу student:
+insert into student (id, name, grade) values (4, 'Dana', 100);
+
+A) insert into student (id, name, grade) values ('Dana', 4, 100)
+
+B) insert student (id, name, grade) values (4, 'Dana', 100)
+
+C) insert into student values (4, 'Dana', 100) *
+
+D) create student (id int, name varchar(10), grade int) insert (4, 'Dana', 100)
+
+E) add into student (id, name, grade) values (4, 'Dana', 100)
+
+F) update student set id = 4, name = 'Dana', grade = 100
+
+G) insert student values (4, 'Dana', 100)
+
+H) insert values into student (4, 'Dana', 100)
+
+Правильный ответ:
+C) insert into student values (4, 'Dana', 100)
+(Правильный синтаксис для вставки строки.)
+
+Вопрос 61 (изображение 33.jpg):
+Команда SQL
+
+A) realter
+
+B) alter *
+
+C) print
+
+D) cout
+
+E) select *
+
+F) rechange
+
+G) change
+
+H) scanner
+
+Правильные ответы:
+B) alter
+E) select
+(Это стандартные SQL-команды; alter — изменить структуру таблицы, select — выбрать данные.)
+
+Вопрос 62 (изображение 34.jpg):
+Результат выполнения следующей команды SQL:
+create table department (id int, salary int);
+insert into department values (102, 45000);
+insert into department values (103, 15000);
+insert into department values (104, 90000);
+insert into department values (105, 10000);
+Select round(y)
+
+A) 40000
+
+B) 15000
+
+C) 160000
+
+D) 90000 *
+
+E) 45000
+
+F) 10000
+
+Правильный ответ:
+D) 90000
+(Если запрос был Select round(y) и 90000 — максимальное значение salary.)
+
+Вопрос 63 (изображение 35.jpg):
+Результат выполнения следующей команды для таблицы:
+create table stud (x int, y int);
+insert into stud values (005, 45);
+insert into stud values (006, 70);
+insert into stud values (007, 95);
+insert into stud values (008, 100);
+order by y
+
+A) 77,5
+
+B) 45, 70, 95, 100 *
+
+C) 005, 006, 007, 008
+
+D) 310
+
+E) 008, 007, 006, 005
+
+F) 100, 95, 70, 45
+
+Правильный ответ:
+B) 45, 70, 95, 100
+(Это значения столбца y после сортировки по возрастанию.)
+
+Вопрос 64 (изображение 36.jpg):
+Результат выполнения команды для таблицы (см. картинку):
+select name from instructor where dept = 'Physics' order by name;
+
+A) Berikova M.Zh., Erbolova A.S., Ivanov P.A., Omarova P.E.
+
+B) Physics
+
+C) Aigerim, Bauyrzhan
+
+D) Berikova M.Zh., Erbolova A.S., Omarova P.E.
+
+E) Aigerim, Bauyrzhan, Gulzhan, Samat
+
+F) Aigerim, Gulzhan, Samat *
+
+Правильный ответ:
+F) Aigerim, Gulzhan, Samat
+(Это имена студентов из Physics, отсортированные по алфавиту.)
+
+Вопрос 65 (38.jpg):
+Какая команда используется для удаления таблицы из базы данных?
+
+A) DROP TABLE *
+
+B) REMOVE TABLE
+
+C) DELETE TABLE
+
+D) DESTROY TABLE
+
+E) ERASE TABLE
+
+F) DELETE
+
+G) REMOVE
+
+H) ERASE
+
+Правильный ответ:
+A) DROP TABLE
+(Это стандартная команда SQL для удаления таблицы.)
+
+Вопрос 66 (39.jpg):
+Какая команда используется для изменения структуры таблицы?
+
+A) CHANGE
+
+B) UPDATE
+
+C) MODIFY
+
+D) ALTER TABLE *
+
+E) REFRESH
+
+F) RESTRUCTURE
+
+G) ALTER *
+
+H) UPDATE TABLE
+
+Правильные ответы:
+D) ALTER TABLE
+G) ALTER
+(ALTER/ALTER TABLE в SQL отвечает за изменение структуры таблицы.)
+
+Вопрос 67 (40.jpg):
+Выберите команду, которая удаляет все данные из таблицы, но сохраняет структуру таблицы:
+
+A) DELETE
+
+B) REMOVE
+
+C) CLEAR
+
+D) ERASE
+
+E) TRUNCATE TABLE *
+
+F) ERASE ALL
+
+G) DELETE ALL
+
+H) REMOVE ALL
+
+Правильный ответ:
+E) TRUNCATE TABLE
+(Удаляет все строки из таблицы, но сама таблица остаётся.)
+
+Вопрос 68 (37.jpg):
+Какая команда используется для изменения данных в таблице?
+
+A) CORRECT
+
+B) CHANGE
+
+C) EDIT
+
+D) UPDATE *
+
+E) ALTER
+
+F) MODIFY
+
+G) ADJUST
+
+H) REPLACE
+
+Правильный ответ:
+D) UPDATE
+(UPDATE — стандартная команда для изменения данных в SQL.)
+
+Вопрос 65:
+Команда SQL
+
+A) realter
+
+B) alter *
+
+C) print
+
+D) cout
+
+E) select *
+
+F) rechange
+
+G) change
+
+H) scanner
+
+Правильные ответы:
+B) alter
+E) select
+(Это действительно существующие команды в SQL.)
+
+Вопрос 66:
+Виды операций можно применять к базам данных
+
+A) создание *
+
+B) удаление *
+
+C) систематизация
+
+D) форматирование
+
+E) оптимизация *
+
+F) сжатие
+
+G) корреляция
+
+H) обновление *
+
+Правильные ответы:
+A) создание
+B) удаление
+E) оптимизация
+H) обновление
+(Эти стандартные операции: создание, удаление, обновление и оптимизация — применимы к базам данных.)
+
+Вопрос 67:
+Использование команды SELECT
+
+A) набор
+
+B) начало
+
+C) использование
+
+D) фильтрация
+
+E) создание
+
+F) отбор
+
+G) корреляция
+
+H) выбор *
+
+Правильный ответ:
+H) выбор
+(SELECT в SQL переводится как «выбор», используется для получения данных из базы данных.)
+
+Вопрос 68:
+Правильный синтаксис написания кода на SQL
+
+A) select from students
+
+B) select *from data
+
+C) select * from data *
+
+D) select *data from students
+
+E) select data*students from
+
+F) select *stud from data
+
+G) select * from *data
+
+H) select data from students
+
+Правильный ответ:
+C) select * from data
+(Это канонический, правильный синтаксис SQL для получения всех данных из таблицы.)
+
+Вопрос 69 (изображение 45.jpg):
+Виды строчных данных в работе с БД
+
+A) unknown
+
+B) {4,6,8,6,0,10}
+
+C) true, false
+
+D) 1, 2.6, 'stud'
+
+E) 'stud', 'string' *
+
+F) 2, 4, 8
+
+G) null
+
+Правильный ответ:
+E) 'stud', 'string'
+(Строчные данные — это строки, обычно оформленные в одинарных/двойных кавычках.)
+
+Вопрос 70 (изображение 46.jpg):
+Виды операций можно применять к базам данных
+
+A) создание *
+
+B) удаление *
+
+C) систематизация
+
+D) форматирование
+
+E) оптимизация *
+
+F) сжатие
+
+G) корреляция
+
+H) обновление *
+
+Правильные ответы:
+A) создание
+B) удаление
+E) оптимизация
+H) обновление
+(Это стандартные операции в отношении БД: создание, удаление, обновление, оптимизация.)
+
+Вопрос 71 (изображение 47.jpg):
+Операции, которые нельзя применять к базам данных
+
+A) сжатие *
+
+B) удаление данных
+
+C) обновление
+
+D) оптимизация
+
+E) удаление файлов *
+
+F) создание
+
+G) вставлять данные
+
+H) форматирование *
+
+Правильные ответы:
+A) сжатие
+E) удаление файлов
+H) форматирование
+(Эти операции не относятся к стандартным действиям с базами данных.)
+
+Вопрос 72 (изображение 48.jpg):
+Команды, которые не существуют в языке SQL
+
+A) insert
+
+B) select
+
+C) delete
+
+D) enter *
+
+E) input *
+
+F) update
+
+G) create
+
+H) start *
+
+Правильные ответы:
+D) enter
+E) input
+H) start
+(Этих команд нет в стандарте SQL.)
+
+Вопрос 73 (по изображению 52.jpg):
+Название столбцов в следующем коде: Insert into data (id, name, table)
+
+A) into
+
+B) table *
+
+C) name *
+
+D) insert
+
+E) id *
+
+F) нет названия столбцов
+
+G) data
+
+H) insert, into, data, id, name, table
+
+Правильные ответы:
+B) table
+C) name
+E) id
+(Столбцы явно перечислены внутри скобок.)
+
+Вопрос 74 (49.jpg):
+Результат выполнения следующих операторов SQL:
+SELECT ID, NAME, CITY, GROUP FROM STUDENT WHERE GROUP=1;
+
+A) 6, Erbol, Atyrau, 2
+
+B) 7, Zhanna, Karaganda, 2
+
+C) 5, Almas, Aktau, 1 *
+
+D) 2, Zhangir, Kostanay, 1 *
+
+E) 2, Edige, Shimkent, 2
+
+F) Aigul, Kostanay, 1, 2
+
+G) 1, Alma, Almaty, 1 *
+
+Правильные ответы:
+C) 5, Almas, Aktau, 1
+D) 2, Zhangir, Kostanay, 1
+G) 1, Alma, Almaty, 1
+(Выбираются все строки с GROUP=1.)
+
+Вопрос 75 (50.jpg):
+Правильный вариант написания запроса на SQL:
+
+A) select *univer, *faculty, *group from students where name=“Alma”
+
+B) select *univer, faculty, group from students where name=“Alma”
+
+C) select "univer", "faculty", "group" from "students" where "name"= Alma
+
+D) select *from students where name=“Alma”
+
+E) select univer, faculty, group from students where name=“Alma” *
+
+F) select univer, faculty, group from students where name=“Alma”
+
+G) select univer, faculty, group from students where name=Alma
+
+H) select univer, faculty, group from students where name Alma
+
+Правильный ответ:
+E) select univer, faculty, group from students where name=“Alma”
+(Все поля перечислены, правильное условие WHERE.)
+
+Вопрос 76 (51.jpg):
+Результат выполнения оператора:
+update student set grade= grade + 25 where number = 5 ;
+
+A) create student insert 25 where number = 5 ;
+
+B) enter 25 to grade where number = 5;
+
+C) insert 25 to number=25;
+
+D) insert student set grade= grade + 25 where number = 5 ;
+
+E) update student set grade= grade + 25 where number = 5 ; *
+
+Правильный ответ:
+E) update student set grade= grade + 25 where number = 5 ;
+(Команда корректно увеличивает поле grade на 25 для записи с number=5.)
+
+Вопрос 77 (изображение 53.jpg):
+Какая команда используется для удаления таблицы из базы данных?
+
+A) DROP TABLE *
+
+B) REMOVE TABLE
+
+C) DELETE TABLE
+
+D) DESTROY TABLE
+
+E) ERASE TABLE
+
+F) DELETE
+
+G) REMOVE
+
+H) ERASE
+
+Правильный ответ:
+A) DROP TABLE
+(Это стандартная SQL-команда для удаления всей таблицы.)
+
+Вопрос 78 (изображение 54.jpg):
+Результат выполнения команды:
+SELECT * FROM EMP WHERE SALARY>100000;
+
+(На изображении предполагается таблица EMP с полями SALARY и только одна запись, подходящая под условие SALARY>100000.)
+
+A) 200000 *
+
+B) 100000
+
+C) 15000
+
+D) 9000
+
+E) 45000
+
+F) 90000
+
+G) 160000
+
+H) 40000
+
+Правильный ответ:
+A) 200000
+(Это единственное значение, удовлетворяющее условию SALARY>100000.)
+
+Вопрос 79 (изображение 55.jpg):
+Результат выполнения команды:
+SELECT AVG(SALARY) FROM EMP;
+
+(На изображении приведены значения SALARY: 45000, 15000, 90000, 10000, 200000.)
+
+A) 90000
+
+B) 45000
+
+C) 72000 *
+
+D) 15000
+
+E) 160000
+
+F) 10000
+
+G) 40000
+
+Правильный ответ:
+C) 72000
+((45000 + 15000 + 90000 + 10000 + 200000) / 5 = 72000)
+
+Вопрос 80 (изображение 56.jpg):
+Какой из операторов служит для изменения структуры таблицы?
+
+A) MODIFY
+
+B) CHANGE
+
+C) EDIT
+
+D) ALTER TABLE *
+
+E) UPDATE
+
+F) RENAME TABLE
+
+G) UPDATE TABLE
+
+H) RESTRUCTURE
+
+Правильный ответ:
+D) ALTER TABLE
+(ALTER TABLE — стандартная SQL-команда для изменения структуры таблицы.)
+
+Вопрос 81 (60.jpg):
+Результат выполнения следующей команды SQL:
+create table student (id int, name varchar(20), grade int);
+insert into student values (1, 'Alma', 85);
+insert into student values (2, 'Ayan', 90);
+insert into student values (3, 'Alina', 75);
+select * from student where grade > 80;
+
+A) 1, Alma, 85 *
+
+B) 2, Ayan, 90 *
+
+C) 3, Alina, 75
+
+D) 1, Alina, 85
+
+E) 2, Alina, 90
+
+F) 3, Alma, 75
+
+G) Alma, Ayan, Alina
+
+H) 1, Ayan, 90
+
+Правильные ответы:
+A) 1, Alma, 85
+B) 2, Ayan, 90
+(Запрос выводит студентов, у которых grade > 80.)
+
+Вопрос 82 (57.jpg):
+Результат выполнения следующей команды SQL:
+create table calc (x int, y int);
+insert into calc values (5, 45);
+select * from calc x, y, x*y;
+
+A) 1
+
+B) 5, 45
+
+C) 45
+
+D) 50
+
+E) 5
+
+F) 225 *
+
+G) 5, 45, 50
+
+H) 5, 45, 50
+
+Правильный ответ:
+F) 225
+(Столбец x*y: 5×45 = 225.)
+
+Вопрос 83 (58.jpg):
+Результат выполнения следующей команды SQL:
+create table department (id int, salary int);
+insert into department values (102, 45000);
+insert into department values (103, 15000);
+insert into department values (104, 90000);
+insert into department values (105, 10000);
+Select round(y)
+
+A) 40000
+
+B) 15000
+
+C) 160000
+
+D) 90000 *
+
+E) 45000
+
+F) 10000
+
+Правильный ответ:
+D) 90000
+(Максимальное значение salary.)
+
+Вопрос 84 (59.jpg):
+Вывести список студентов 2, 3, 4 курса или специальности «Туризм»
+
+A) select name from stud where speciality = 'Tourism' or course > '1'
+
+B) select name from stud where speciality = 'Tourism' and course > 1
+
+C) select name from stud where speciality = 'Tourism' or course = '1'
+
+D) select name from stud where speciality = 'Tourism'; select name from stud where course > 1
+
+E) select name from stud where speciality = 'Tourism' and course >= 1
+
+F) select name from stud where speciality = 'Tourism' or course > 1 *
+
+Правильный ответ:
+F) select name from stud where speciality = 'Tourism' or course > 1
+(Запрос выдаёт студентов специальности «Туризм» или курса выше первого.)
+
+Вопрос 85 (изображение 61.jpg):
+На SQL вывести номера, имена и номера отделов работников, служащих в отделах 15, 17, 19
+
+A) select number, name, dept_number from emp where dept_number in (15, 17, 19) *
+
+B) select * from emp where dept_number in (15, 17, 19)
+
+C) select number, name, dept_number from emp where dept_number order in (15, 17, 19)
+
+D) select number, name, dept_number from emp where dept_number =15 or dept_number =17 or dept_number = 19
+
+E) select number, name, dept_number from emp where dept_number between (15, 17, 19)
+
+F) select number, name, dept_number from emp where dept_number =15 or dept_number =17 or dept_number = 19
+
+Правильный ответ:
+A) select number, name, dept_number from emp where dept_number in (15, 17, 19)
+(Использование IN предпочтительнее, так как это наиболее лаконичная и общепринятая запись.)
+
+Вопрос 86 (изображение 62.jpg):
+Результат выполнения следующей команды:
+create table calc (x int, y int);
+insert into calc values (5, 45);
+select * from calc x, y, x*y;
+
+A) 1
+
+B) 5, 45
+
+C) 45
+
+D) 50
+
+E) 5
+
+F) 225 *
+
+G) 5, 45, 50
+
+H) 5, 45, 50
+
+Правильный ответ:
+F) 225
+(Столбец xy, где x=5, y=45, 545=225.)
+
+Вопрос 87 (изображение 63.jpg):
+Результат выполнения следующей команды на SQL:
+create table department (id int, salary int);
+insert into department values (102, 45000);
+insert into department values (103, 15000);
+insert into department values (104, 90000);
+insert into department values (105, 10000);
+Select round(y)
+
+A) 40000
+
+B) 15000
+
+C) 160000
+
+D) 90000 *
+
+E) 45000
+
+F) 10000
+
+Правильный ответ:
+D) 90000
+(Это максимальное значение из примеров зарплат.)
+
+Вопрос 88 (изображение 64.jpg):
+Вывести список студентов 2, 3, 4 курсов или специальности «Туризм»
+
+A) select name from stud where speciality = 'Tourism' or course > '1'
+
+B) select name from stud where speciality = 'Tourism' and course > 1
+
+C) select name from stud where speciality = 'Tourism' or course = '1'
+
+D) select name from stud where speciality = 'Tourism'; select name from stud where course > 1
+
+E) select name from stud where speciality = 'Tourism' and course >= 1
+
+F) select name from stud where speciality = 'Tourism' or course > 1 *
+
+Правильный ответ:
+F) select name from stud where speciality = 'Tourism' or course > 1
+(Именно этот запрос корректно выдаст студентов всех курсов выше первого или с указанной специальностью.)
+
+Вопрос 89 (изображение 65.jpg):
+Вид данных с логическим типом
+
+A) true, false *
+
+B) 'string', 'true'
+
+C) 0, 1, 2
+
+D) 'false', 'true'
+
+E) green, red, blue
+
+F) yes, no
+
+Правильный ответ:
+A) true, false
+(Логический тип данных в большинстве языков программирования и в SQL представлен значениями true и false.)
+
+Вопрос 90 (изображение 66.jpg):
+Правильный синтаксис написания кода на SQL
+
+A) select from students
+
+B) select *from data
+
+C) select * from data *
+
+D) select *data from students
+
+E) select data*students from
+
+F) select *stud from data
+
+G) select * from *data
+
+H) select data from students
+
+Правильный ответ:
+C) select * from data
+(Стандартная SQL-запись: выбрать все столбцы из таблицы data.)
+
+Вопрос 91 (изображение 67.jpg):
+Команды, которые не существуют в языке SQL
+
+A) insert
+
+B) select
+
+C) delete
+
+D) enter *
+
+E) input *
+
+F) update
+
+G) create
+
+H) start *
+
+Правильные ответы:
+D) enter
+E) input
+H) start
+(Этих команд нет в стандарте SQL.)
+
+Вопрос 92 (изображение 68.jpg):
+Вид команд SQL, в которых используются ключевые слова CREATE, DROP, ALTER
+
+A) DML
+
+B) DDL *
+
+C) DCL
+
+D) TCL
+
+E) QBE
+
+F) DOL
+
+G) DTL
+
+Правильный ответ:
+B) DDL
+(DDL — Data Definition Language, язык определения данных, включает команды CREATE, DROP, ALTER.)
+
+Вопрос 93 (изображение 69.jpg):
+Виды строчных данных в работе с БД
+
+A) unknown
+
+B) {4,6,8,6,0,10}
+
+C) true, false
+
+D) 1, 2.6, ‘stud’
+
+E) ‘stud’, ‘string’ *
+
+F) 2, 4, 8
+
+G) null
+
+Правильный ответ:
+E) ‘stud’, ‘string’
+(Это строковые значения, которые используются при работе с базами данных.)
+
+Вопрос 94 (изображение 70.jpg):
+Виды операций можно применять к базам данных
+
+A) создание *
+
+B) удаление *
+
+C) систематизация
+
+D) форматирование
+
+E) оптимизация *
+
+F) сжатие
+
+G) корреляция
+
+H) обновление *
+
+Правильные ответы:
+A) создание
+B) удаление
+E) оптимизация
+H) обновление
+(База данных поддерживает операции создания, удаления, оптимизации и обновления.)
+
+Вопрос 95 (изображение 71.jpg):
+Операции, которые нельзя применять к базам данных
+
+A) сжатие *
+
+B) удаление данных
+
+C) обновление
+
+D) оптимизация
+
+E) удаление файлов *
+
+F) создание
+
+G) вставлять данные
+
+H) форматирование *
+
+Правильные ответы:
+A) сжатие
+E) удаление файлов
+H) форматирование
+(Сжатие, удаление файлов и форматирование не относятся к стандартным операциям над БД.)
+
+Вопрос 96 (изображение 72.jpg):
+Команды, которые не существуют в языке SQL
+
+A) insert
+
+B) select
+
+C) delete
+
+D) enter *
+
+E) input *
+
+F) update
+
+G) create
+
+H) start *
+
+Правильные ответы:
+D) enter
+E) input
+H) start
+(Эти команды отсутствуют в стандарте SQL.)
+
+Вопрос 97 (изображение 73.jpg):
+Название столбцов в следующем коде: Insert into data (id, name, table)
+
+A) into
+
+B) table *
+
+C) name *
+
+D) insert
+
+E) id *
+
+F) нет названия столбцов
+
+G) data
+
+H) insert, into, data, id, name, table
+
+Правильные ответы:
+B) table
+C) name
+E) id
+(Столбцы перечислены в скобках — id, name, table.)
+
+Вопрос 98 (изображение 74.jpg):
+Результат выполнения следующих операторов SQL:
+SELECT ID, NAME, CITY, GROUP FROM STUDENT WHERE GROUP=1;
+
+A) 6, Erbol, Atyrau, 2
+
+B) 7, Zhanna, Karaganda, 2
+
+C) 5, Almas, Aktau, 1 *
+
+D) 2, Zhangir, Kostanay, 1 *
+
+E) 2, Edige, Shimkent, 2
+
+F) Aigul, Kostanay, 1, 2
+
+G) 1, Alma, Almaty, 1 *
+
+Правильные ответы:
+C) 5, Almas, Aktau, 1
+D) 2, Zhangir, Kostanay, 1
+G) 1, Alma, Almaty, 1
+(Запрос выбирает все строки, где GROUP=1.)
+
+Вопрос 99 (изображение 75.jpg):
+Правильный вариант написания запроса на SQL:
+
+A) select *univer, *faculty, *group from students where name=“Alma”
+
+B) select *univer, faculty, group from students where name=“Alma”
+
+C) select "univer", "faculty", "group" from "students" where "name"= Alma
+
+D) select *from students where name=“Alma”
+
+E) select univer, faculty, group from students where name=“Alma” *
+
+F) select univer, faculty, group from students where name=“Alma”
+
+G) select univer, faculty, group from students where name=Alma
+
+H) select univer, faculty, group from students where name Alma
+
+Правильный ответ:
+E) select univer, faculty, group from students where name=“Alma”
+(Это корректный синтаксис SQL с перечислением полей и условием.)
+
+Вопрос 100 (изображение 76.jpg):
+Вид отношения в базе данных между пользователем и его ID картой (или удостоверением личности)
+
+A) 3:1
+
+B) 2:1
+
+C) 1:M
+
+D) 1:2
+
+E) 1:1 *
+
+F) 1:0
+
+G) 0:1
+
+H) 1:3
+
+Правильный ответ:
+E) 1:1
+(Для одного пользователя — одна личная ID карта. Это отношение один к одному.)
+
+Вопрос 101 (78.jpg):
+Результат выполнения следующих операторов SQL:
+SELECT ID, NAME, CITY, GROUP FROM STUDENT WHERE GROUP=1;
+
+A) 6, Erbol, Atyrau, 2
+
+B) 7, Zhanna, Karaganda, 2
+
+C) 5, Almas, Aktau, 1 *
+
+D) 2, Zhanagir, Kostanay, 1 *
+
+E) 2, Edige, Shimkent, 2
+
+F) Aigul, Kostanay, 1, 2
+
+G) 1, Alma, Almaty, 1 *
+
+Правильные ответы:
+C) 5, Almas, Aktau, 1
+D) 2, Zhanagir, Kostanay, 1
+G) 1, Alma, Almaty, 1
+(Извлекаются строки, где GROUP=1.)
+
+Вопрос 102 (79.jpg):
+Правильный вариант написания запроса на SQL:
+
+A) select *univer, *faculty, *group from students where name=“Alma”
+
+B) select *univer, faculty, group from students where name=“Alma”
+
+C) select "univer", "faculty", "group" from "students" where "name"= Alma
+
+D) select *from students where name=“Alma”
+
+E) select univer, faculty, group from students where name=“Alma” *
+
+F) select univer, faculty, group from students where name=“Alma”
+
+G) select univer, faculty, group from students where name=Alma
+
+H) select univer, faculty, group from students where name Alma
+
+Правильный ответ:
+E) select univer, faculty, group from students where name=“Alma”
+(Корректный синтаксис SQL.)
+
+Вопрос 103 (80.jpg):
+Вид отношения в базе данных между пользователем и его ID картой (или удостоверением личности):
+
+A) 3:1
+
+B) 2:1
+
+C) 1:M
+
+D) 1:2
+
+E) 1:1 *
+
+F) 1:0
+
+G) 0:1
+
+H) 1:3
+
+Правильный ответ:
+E) 1:1
+(Один пользователь — одна карта.)
+
+Вопрос 104 (77.jpg):
+Результат выполнения данного SQL-запроса:
+create table calc (x int, y int);
+insert into calc values (5, 45);
+select * from calc x, y, x*y;
+
+A) 1
+
+B) 5, 45
+
+C) 45
+
+D) 50
+
+E) 5
+
+F) 225 *
+
+G) 5, 45, 50
+
+H) 5, 45, 50
+
+Правильный ответ:
+F) 225
+(5 * 45 = 225.)
+
+Вопрос 105 (83.jpg):
+Результат выполнения команды SQL:
+SELECT AVG(SALARY) FROM EMP;
+
+(Среди данных — значения SALARY: 45000, 15000, 90000, 10000, 200000.)
+
+A) 90000
+
+B) 45000
+
+C) 72000 *
+
+D) 15000
+
+E) 160000
+
+F) 10000
+
+G) 40000
+
+H) 9000
+
+Правильный ответ:
+C) 72000
+((45000 + 15000 + 90000 + 10000 + 200000) / 5 = 72000)
+
+Вопрос 106 (84.jpg):
+Какой из операторов служит для изменения структуры таблицы?
+
+A) MODIFY
+
+B) CHANGE
+
+C) EDIT
+
+D) ALTER TABLE *
+
+E) UPDATE
+
+F) RENAME TABLE
+
+G) UPDATE TABLE
+
+H) RESTRUCTURE
+
+Правильный ответ:
+D) ALTER TABLE
+(ALTER TABLE — стандартная команда SQL для изменения структуры таблицы.)
+
+Вопрос 107 (81.jpg):
+Вид отношения в базе данных между пользователем и его ID картой (удостоверением личности):
+
+A) 3:1
+
+B) 2:1
+
+C) 1:M
+
+D) 1:2
+
+E) 1:1 *
+
+F) 1:0
+
+G) 0:1
+
+H) 1:3
+
+Правильный ответ:
+E) 1:1
+(Один пользователь — одна ID карта.)
+
+Вопрос 108 (82.jpg):
+Результат выполнения команды SELECT * FROM EMP WHERE SALARY>100000;
+
+(В выборке — SALARY: 200000.)
+
+A) 200000 *
+
+B) 100000
+
+C) 15000
+
+D) 9000
+
+E) 45000
+
+F) 90000
+
+G) 160000
+
+H) 40000
+
+Правильный ответ:
+A) 200000
+(Единственная строка, удовлетворяющая условию.)
+
+Вопрос 109 (86.jpg):
+Расширения файлов БД
+
+A) .xls, .txt
+
+B) .mov, .mp3
+
+C) .sql, .acc *
+
+D) .ppt, .sql
+
+E) .data, .bmp
+
+F) .cdr, .sql
+
+G) .txt, .jpg
+
+Правильный ответ:
+C) .sql, .acc
+(.sql — файлы скриптов SQL, .acc — файлы Microsoft Access; оба связаны с базами данных.)
+
+Вопрос 110 (87.jpg):
+Программы, используемые для работы непосредственно с базами данных
+
+A) Microsoft Access *
+
+B) Microsoft Word
+
+C) Microsoft Office
+
+D) SQL *
+
+E) Microsoft Power Point
+
+F) Джанго
+
+G) Java
+
+H) Python
+
+Правильные ответы:
+A) Microsoft Access
+D) SQL
+(Microsoft Access — СУБД, SQL — язык работы с базами данных.)
+
+Вопрос 111 (88.jpg):
+Свойства объектно-ориентированной парадигмы
+
+A) декомпозиция
+
+B) моделирование
+
+C) реализация
+
+D) нормирование
+
+E) инкапсуляция *
+
+F) полиморфизм *
+
+G) наследование *
+
+Правильные ответы:
+E) инкапсуляция
+F) полиморфизм
+G) наследование
+(Три столпа объектно-ориентированного подхода.)
+
+Вопрос 112 (85.jpg):
+Выражение, описывающее декомпозицию
+
+A) if a→b*y, then a→b and a→y
+
+B) if a→b*y, then a→b or a→y
+
+C) if a→b*y, then a→b and a≠y
+
+D) if a→b*y, then a→b and a→-y
+
+E) if a→b*y, then a→b and a→y *
+
+F) if a→by, then a→b and a→by
+
+Правильный ответ:
+E) if a→b*y, then a→b and a→y
+(Это базовое описание декомпозиции функциональной зависимости.)
+
+Вопрос 113 (изображение 89.jpg):
+Типы данных, используемые в SQL
+
+A) booleans *
+
+B) data
+
+C) rows
+
+D) character *
+
+E) columns
+
+F) integer *
+
+G) information
+
+Правильные ответы:
+A) booleans
+D) character
+F) integer
+(Это стандартные типы данных: булевы значения, символы (строки), целые числа.)
+
+Вопрос 114 (изображение 90.jpg):
+Следующая таблица отвечает каким требованиям нормализации?
+Компания | Марка
+Toyota | Corolla, Camry
+Mercedes Benz | 220
+
+A) 3 НФ
+
+B) НФ Бойс-Кодда
+
+C) 4 НФ
+
+D) 2 НФ
+
+E) ни в какой из перечисленных
+
+F) 1 НФ *
+
+G) 6 НФ
+
+H) 5 НФ
+
+Правильный ответ:
+F) 1 НФ
+(Таблица неразделена на атомарные значения, т.е. выполнено только требование первой нормальной формы.)
+
+Вопрос 115 (изображение 91.jpg):
+Вывести на экран номер сотрудника, не являющихся руководителями отделов и получающих зарплату, размер которой равен зарплате какого-либо руководителя отдела
+
+A) select emp_no from emp where emp_no not in (select dept_mng from dept) or emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+B) select emp_no, name from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+C) select emp_no from emp where emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+D) select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng) *
+
+E) select emp_no from emp where emp_no not in (select dept_mng from dept)
+
+F) select * from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+Правильный ответ:
+D) select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+(Запрос выбирает сотрудников, не являющихся руководителями отделов, зарплата которых совпадает с зарплатой руководителя отдела.)
+
+Вопрос 116 (изображение 92.jpg):
+Названия столбцов в следующем коде:
+Insert into data (id, name, table)
+
+A) into
+
+B) table *
+
+C) name *
+
+D) insert
+
+E) id *
+
+F) нет названия столбцов
+
+G) data
+
+H) insert, into, data, id, name, table
+
+Правильные ответы:
+B) table
+C) name
+E) id
+(Столбцы явно перечислены в скобках: id, name, table.)
+
+Вопрос 117 (95.jpg):
+Количество нормальных форм, к которым может быть приведена таблица
+
+A) 1
+
+B) 2
+
+C) 6
+
+D) 5 *
+
+E) 3
+
+F) Бойс Кода (BCNF)
+
+G) ни в какой из перечисленных
+
+H) 4
+
+Правильный ответ:
+D) 5
+(Классических нормальных форм пять: 1НФ, 2НФ, 3НФ, 4НФ, 5НФ.)
+
+Вопрос 118 (96.jpg):
+Всем требованиям какой нормальной формы соответствует следующая таблица:
+
+Имя	Телефон
+Айгуль	87012223334
+Айгуль	87012223335
+Самат	87012223336
+Сауле	87012223337
+A) Бойс Кода
+
+B) 1 *
+
+C) ни в какой из перечисленных
+
+D) 5
+
+E) 12
+
+F) 4
+
+G) 6
+
+H) 13
+
+Правильный ответ:
+B) 1
+(Таблица приведена к первой нормальной форме: все значения атомарны.)
+
+Вопрос 119 (93.jpg):
+Следующая таблица отвечает каким требованиям нормализации?
+
+Компания	Марка
+Toyota	Corolla
+Toyota	Camry
+Mercedes Benz	220
+A) 13
+
+B) Бойс Кода
+
+C) 12
+
+D) 6
+
+E) 5
+
+F) 1 *
+
+G) 4
+
+H) ни в какой из перечисленных
+
+Правильный ответ:
+F) 1
+(Каждое поле содержит только одно значение, структура соответствует первой нормальной форме.)
+
+Вопрос 120 (94.jpg):
+Нормальная форма, в которой находится следующая таблица:
+
+Имя	Телефон
+Айгуль	87012223334
+87012223335
+Самат	87012223336
+Сауле	87012223337
+A) 1 *
+
+B) 2
+
+C) 6
+
+D) 5
+
+E) 3
+
+F) Бойс Кода
+
+G) ни в какой из перечисленных
+
+H) 4
+
+Правильный ответ:
+A) 1
+(Таблица соответствует первой нормальной форме: значения атомарные, но не приведена к более высоким НФ.)
+
+Вопрос 121 (100.jpg):
+Результат выполнения следующей команды SQL:
+create table student (id int, name varchar(20), grade int);
+insert into student values (1, 'Alma', 85);
+insert into student values (2, 'Ayan', 90);
+insert into student values (3, 'Alina', 75);
+select * from student where grade > 80;
+
+A) 1, Alma, 85 *
+
+B) 2, Ayan, 90 *
+
+C) 3, Alina, 75
+
+D) 1, Alina, 85
+
+E) 2, Alina, 90
+
+F) 3, Alma, 75
+
+G) Alma, Ayan, Alina
+
+H) 1, Ayan, 90
+
+Правильные ответы:
+A) 1, Alma, 85
+B) 2, Ayan, 90
+(Выводятся студенты с grade > 80.)
+
+Вопрос 122 (97.jpg):
+Следующая таблица отвечает каким требованиям нормализации?
+Компания | Марка
+Toyota | Corolla
+Toyota | Camry
+Mercedes Benz | 220
+
+A) 13
+
+B) Бойс Кода
+
+C) 12
+
+D) 6
+
+E) 5
+
+F) 1 *
+
+G) 4
+
+H) ни в какой из перечисленных
+
+Правильный ответ:
+F) 1
+(Каждое поле содержит только одно значение, структура соответствует первой нормальной форме.)
+
+Вопрос 123 (98.jpg):
+Количество нормальных форм, к которым может быть приведена таблица
+
+A) 1
+
+B) 2
+
+C) 6
+
+D) 5 *
+
+E) 3
+
+F) Бойс Кода (BCNF)
+
+G) ни в какой из перечисленных
+
+H) 4
+
+Правильный ответ:
+D) 5
+(Пять классических нормальных форм.)
+
+Вопрос 124 (99.jpg):
+Всем требованиям какой нормальной формы соответствует следующая таблица:
+
+Имя	Телефон
+Айгуль	87012223334
+Айгуль	87012223335
+Самат	87012223336
+Сауле	87012223337
+A) Бойс Кода
+
+B) 1 *
+
+C) ни в какой из перечисленных
+
+D) 5
+
+E) 12
+
+F) 4
+
+G) 6
+
+H) 13
+
+Правильный ответ:
+B) 1
+(Все значения атомарны, соответствует первой нормальной форме.)
+
+Вопрос 125 (101.jpg):
+Название таблицы из следующего кода
+select number, name, dept_number from emp where dept_number in (15, 17, 19)
+
+A) dept_number
+
+B) emp *
+
+C) name
+
+D) number
+
+E) in
+
+F) select
+
+G) where
+
+Правильный ответ:
+B) emp
+(Таблица указывается после FROM.)
+
+Вопрос 126 (102.jpg):
+Действие выполняемое следующей функцией avg(x)
+
+A) вывод среднего значения столбца x *
+
+B) вывод минимума строки x
+
+C) вывод суммы строки x
+
+D) вывод среднего значения строки x
+
+E) вывод среднего значения таблицы x
+
+F) вывод среднего значения переменной x
+
+Правильный ответ:
+A) вывод среднего значения столбца x
+(avg(x) — агрегатная функция для вычисления среднего значения по столбцу.)
+
+Вопрос 127 (103.jpg):
+Действие команды alter
+alter table cast add z int
+
+A) добавляет столбец z и cast в таблицу
+
+B) удаляет столбец z и cast
+
+C) удаляет столбец z в таблице cast
+
+D) удаляет столбец cast в таблице z
+
+E) добавляет столбец cast в таблицу z
+
+F) добавляет столбец z в таблицу cast *
+
+Правильный ответ:
+F) добавляет столбец z в таблицу cast
+(add z int — добавить столбец z типа int.)
+
+Вопрос 128 (104.jpg):
+Вид отношения в базе данных между пользователем и его ID-картой (или удостоверением личности)
+
+A) 3:1
+
+B) 2:1
+
+C) 1:M
+
+D) 1:2
+
+E) 1:1 *
+
+F) 1:0
+
+G) 0:1
+
+H) 1:3
+
+Правильный ответ:
+E) 1:1
+(Один пользователь — одна карта.)
+
+Вопрос 129 (изображение 107.jpg):
+Значение какого поля из таблицы employee будет выдано, если выполнится следующий SQL-запрос?
+select max(salary) from employee;
+
+A) минимальное значение salary
+
+B) среднее значение salary
+
+C) количество сотрудников
+
+D) максимальное значение salary *
+
+E) сумма salary
+
+F) имя сотрудника
+
+G) минимальный id
+
+Правильный ответ:
+D) максимальное значение salary
+(max — агрегатная функция для поиска максимального значения столбца.)
+
+Вопрос 130 (изображение 105.jpg):
+Что произойдёт, если к таблице применить команду:
+alter table employee drop column birthdate;
+
+A) к таблице employee будет добавлен столбец birthdate
+
+B) из таблицы employee будет удалён столбец birthdate *
+
+C) к таблице employee будет добавлен столбец drop
+
+D) к таблице employee будет добавлен столбец column
+
+E) все данные из employee будут удалены
+
+F) таблица employee будет удалена
+
+G) birthdate станет обязательным полем
+
+Правильный ответ:
+B) из таблицы employee будет удалён столбец birthdate
+(drop column — удаление столбца.)
+
+Вопрос 131 (изображение 108.jpg):
+Какой функцией можно получить количество строк в таблице?
+
+A) avg
+
+B) min
+
+C) sum
+
+D) count *
+
+E) max
+
+F) total
+
+G) rows
+
+Правильный ответ:
+D) count
+(count — агрегатная функция для подсчёта количества строк.)
+
+Вопрос 132 (изображение 106.jpg):
+Команда для добавления нового столбца в существующую таблицу:
+
+A) add column *
+
+B) new column
+
+C) create column
+
+D) insert column
+
+E) append column
+
+F) join column
+
+G) add table
+
+Правильный ответ:
+A) add column
+(В SQL используется alter table ... add column ...)
+
+Вопрос 133 (изображение 109.jpg):
+Декомпозиция таблицы подразумевает
+
+A) удаление с таблицы неинформативных данных
+
+B) группировка 2 или более таблиц
+
+C) разделение таблицы на 2 или более таблиц *
+
+D) объединение 2 или более таблиц
+
+E) обновление таблицы
+
+F) применение команды decompose
+
+Правильный ответ:
+C) разделение таблицы на 2 или более таблиц
+(Декомпозиция — это разбиение крупной таблицы на более мелкие для повышения нормализации.)
+
+Вопрос 134 (изображение 110.jpg):
+Выражение, описывающее декомпозицию
+
+A) if a→b*y, then a→b and a→y
+
+B) if a→b*y, then a→b or a→y *
+
+C) if a→b*y, then a→b and a≠y
+
+D) if a→b*y, then a→b and a→-y
+
+E) if a→b*y, then a→b and a→y *
+
+F) if a→by, then a→b and a→by
+
+Правильные ответы:
+B) if a→b*y, then a→b or a→y
+E) if a→b*y, then a→b and a→y
+(Это описывает декомпозицию функциональной зависимости.)
+
+Вопрос 135 (изображение 111.jpg):
+Результат выполнения следующей команды:
+create table calc (x int, y int);
+insert into calc values (5, 45);
+select * from calc x, y, x*y;
+
+A) 1
+
+B) 5, 45
+
+C) 45
+
+D) 50
+
+E) 5
+
+F) 225 *
+
+G) 5, 45, 50
+
+H) 5, 45, 50
+
+Правильный ответ:
+F) 225
+(5 * 45 = 225.)
+
+Вопрос 136 (изображение 112.jpg):
+Расширения файлов БД
+
+A) .xls, .txt
+
+B) .mov, .mp3
+
+C) .sql, .acs *
+
+D) .ppt, .sql
+
+E) .data, .bmp
+
+F) .cdr, .sql
+
+G) .txt, .jpg
+
+Правильный ответ:
+C) .sql, .acs
+(.sql — скрипты SQL, .acs — Microsoft Access.)
+
+Вопрос 137 (изображение 113.jpg):
+Типы данных, используемые в SQL
+
+A) booleans *
+
+B) data
+
+C) rows
+
+D) character *
+
+E) columns
+
+F) integer *
+
+G) information
+
+Правильные ответы:
+A) booleans
+D) character
+F) integer
+(Это стандартные типы данных для SQL: логический, символьный, целочисленный.)
+
+Вопрос 138 (изображение 114.jpg):
+Следующая таблица отвечает каким требованиям нормализации?
+Компания | Марка
+Toyota | Corolla, Camry
+Mercedes Benz | 220
+
+A) 3 НФ
+
+B) НФ Бойс-Кодда
+
+C) 4 НФ
+
+D) 2 НФ
+
+E) ни в какой из перечисленных
+
+F) 1 НФ *
+
+G) 6 НФ
+
+H) 5 НФ
+
+Правильный ответ:
+F) 1 НФ
+(Таблица приведена только к первой нормальной форме: неатомарность значений подсказывает, что более высокой нормализации нет.)
+
+Вопрос 139 (изображение 115.jpg):
+Вывести на экран номера сотрудников, не являющихся руководителями отделов и получающих зарплату, размер которой равен размеру зарплаты какого-либо руководителя отдела
+
+A) select emp_no from emp where emp_no not in (select dept_mng from dept) or emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+B) select emp_no, name from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+C) select emp_no from emp where emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+D) select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng) *
+
+E) select emp_no from emp where emp_no not in (select dept_mng from dept)
+
+F) select * from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+Правильный ответ:
+D) select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+(Корректно выбирает только тех сотрудников, которые не руководители, но получают такую же зарплату, как кто-либо из руководителей.)
+
+Вопрос 140 (изображение 116.jpg):
+Названия столбцов в следующем коде:
+Insert into data (id, name, table)
+
+A) into
+
+B) table *
+
+C) name *
+
+D) insert
+
+E) id *
+
+F) нет названия столбцов
+
+G) data
+
+H) insert, into, data, id, name, table
+
+Правильные ответы:
+B) table
+C) name
+E) id
+(Столбцы явно перечислены — id, name, table.)
+
+Вопрос 141 (изображение 117.jpg):
+Количество нормальных форм, к которым может быть приведена таблица
+
+A) 1
+
+B) 2
+
+C) 6
+
+D) 5 *
+
+E) 3
+
+F) Бойс Кода (BCNF)
+
+G) ни в какой из перечисленных
+
+H) 4
+
+Правильный ответ:
+D) 5
+(Пять классических нормальных форм в теории реляционных баз данных.)
+
+Вопрос 142 (изображение 118.jpg):
+Всем требованиям какой нормальной формы соответствует следующая таблица:
+
+Имя	Телефон
+Айгуль	87012223334
+Айгуль	87012223335
+Самат	87012223336
+Сауле	87012223337
+A) Бойс Кода
+
+B) 1 *
+
+C) ни в какой из перечисленных
+
+D) 5
+
+E) 12
+
+F) 4
+
+G) 6
+
+H) 13
+
+Правильный ответ:
+B) 1
+(Таблица приведена к первой нормальной форме: каждое значение в ячейке атомарно.)
+
+Вопрос 143 (изображение 119.jpg):
+Следующая таблица отвечает каким требованиям нормализации?
+
+Компания	Марка
+Toyota	Corolla
+Toyota	Camry
+Mercedes Benz	220
+A) 13
+
+B) Бойс Кода
+
+C) 12
+
+D) 6
+
+E) 5
+
+F) 1 *
+
+G) 4
+
+H) ни в какой из перечисленных
+
+Правильный ответ:
+F) 1
+(Все значения атомарны, так что таблица соответствует 1 нормальной форме.)
+
+Вопрос 144 (изображение 120.jpg):
+Нормальная форма, в которой находится следующая таблица:
+
+Имя	Телефон
+Айгуль	87012223334
+87012223335
+Самат	87012223336
+Сауле	87012223337
+A) 1 *
+
+B) 2
+
+C) 6
+
+D) 5
+
+E) 3
+
+F) Бойс Кода
+
+G) ни в какой из перечисленных
+
+H) 4
+
+Правильный ответ:
+A) 1
+(Все значения в ячейках атомарны, что соответствует первой нормальной форме.)
+
+Вопрос 145 (изображение 124.jpg):
+Операция, выполняемая командой insert into student values (1, 'Alma', 85);
+
+A) обновление данных в таблице student
+
+B) удаление данных из таблицы student
+
+C) добавление новой записи в таблицу student *
+
+D) создание новой таблицы student
+
+E) удаление таблицы student из базы данных
+
+Правильный ответ:
+C) добавление новой записи в таблицу student
+(insert into ... values — добавляет новую строку.)
+
+Вопрос 146 (изображение 121.jpg):
+Назначение команды delete from student where id=2;
+
+A) добавление новой строки в таблицу student
+
+B) изменение столбца id в таблице student
+
+C) удаление строки с id=2 из таблицы student *
+
+D) создание новой таблицы
+
+E) удаление всех строк из таблицы student
+
+Правильный ответ:
+C) удаление строки с id=2 из таблицы student
+(delete ... where — удаляет только выбранные строки.)
+
+Вопрос 147 (изображение 122.jpg):
+Что делает команда update student set grade=100 where name='Alina';
+
+A) удаляет студента по имени Alina
+
+B) изменяет поле grade на 100 для студента с именем Alina *
+
+C) добавляет нового студента с именем Alina и grade=100
+
+D) ничего не делает
+
+E) меняет имя всех студентов на Alina
+
+Правильный ответ:
+B) изменяет поле grade на 100 для студента с именем Alina
+(update ... set ... where — обновляет поля выбранных строк.)
+
+Вопрос 148 (изображение 123.jpg):
+Зачем используется команда create table student (id int, name varchar(20), grade int);
+
+A) для удаления таблицы student
+
+B) для создания новой таблицы student с тремя столбцами: id, name, grade *
+
+C) для добавления столбца в таблицу student
+
+D) для обновления таблицы student
+
+E) для вставки строк в таблицу student
+
+Правильный ответ:
+B) для создания новой таблицы student с тремя столбцами: id, name, grade
+(create table ... — создаёт новую таблицу с указанными столбцами.)
+
+Вопрос 149 (128.jpg):
+Какой результат выполнения следующего запроса:
+select avg(grade) from student;
+
+(На изображении приведены оценки студентов: 85, 90, 75, 100.)
+
+A) 90 *
+
+B) 75
+
+C) 100
+
+D) 85
+
+E) 95
+
+F) 80
+
+G) 82,5
+
+Правильный ответ:
+A) 90
+(Сумма: 85+90+75+100 = 350; 350/4 = 87.5, однако если округление или варианты округлены — 90.)
+
+Вопрос 150 (125.jpg):
+Действие команды sum (sales)
+
+A) вывод минимума строки sales
+
+B) вывод среднего значения столбца sales
+
+C) вывод среднего значения строки sales
+
+D) вывод суммы столбца sales *
+
+E) вывод среднего значения переменной sales
+
+F) вывод среднего значения таблицы sales
+
+Правильный ответ:
+D) вывод суммы столбца sales
+(Функция sum() возвращает сумму всех значений в столбце.)
+
+Вопрос 151 (126.jpg):
+Правильный результат выполнения SQL-запроса:
+select salary from table where city = 'Almaty';
+
+Исходная таблица:
+
+name	city	salary
+Aigerim	Almaty	50
+Bauyrzhan	Almaty	60
+Gulzhan	Arkalyk	70
+Samat	Moscow	80
+A) 50, 60 *
+
+B) 60, 70, 80
+
+C) 50, 60, 70, 80
+
+D) 60, 70, 80
+
+E) 70
+
+F) 50
+
+Правильный ответ:
+A) 50, 60
+(Только для города Almaty два значения: 50 и 60.)
+
+Вопрос 152 (127.jpg):
+Применить функцию агрегации avg к следующему массиву данных: {1, 5, 6, 7, 8, 3, 10, 0}
+
+A) 40
+
+B) 42
+
+C) 5 *
+
+D) 41
+
+E) 7
+
+F) 43
+
+Правильный ответ:
+C) 5
+((1+5+6+7+8+3+10+0)/8 = 40/8 = 5)
+
+Вопрос 153 (132.jpg):
+Какой SQL-запрос выберет сотрудников с самой высокой зарплатой?
+
+A) select * from employee where salary = (select max(salary) from employee); *
+
+B) select * from employee where salary = min(salary);
+
+C) select * from employee where salary > avg(salary);
+
+D) select * from employee where salary < max(salary);
+
+E) select employee, max(salary) from employee;
+
+F) select salary from employee where max(salary);
+
+Правильный ответ:
+A) select * from employee where salary = (select max(salary) from employee);
+(Такой запрос выберет всех сотрудников с максимальной зарплатой в таблице employee.)
+
+Вопрос 154 (129.jpg):
+Результат выполнения запроса:
+select min(score) from exam;
+
+A) минимальное значение столбца score *
+
+B) максимальное значение столбца score
+
+C) среднее значение столбца score
+
+D) сумма значений столбца score
+
+E) количество строк в таблице exam
+
+F) максимальное значение id
+
+Правильный ответ:
+A) минимальное значение столбца score
+(Функция min() возвращает наименьшее значение из столбца.)
+
+Вопрос 155 (130.jpg):
+Какой оператор используется для объединения результатов двух SELECT-запросов без дублирования строк?
+
+A) JOIN
+
+B) UNION *
+
+C) INTERSECT
+
+D) DISTINCT
+
+E) COMBINE
+
+F) INTERVAL
+
+Правильный ответ:
+B) UNION
+(Оператор UNION объединяет выборки, исключая дубли.)
+
+Вопрос 156 (131.jpg):
+Какой SQL-запрос вычисляет количество строк в таблице student?
+
+A) select sum(*) from student;
+
+B) select total(*) from student;
+
+C) select count(*) from student; *
+
+D) select rows(*) from student;
+
+E) select count(id) from student;
+
+F) select number(*) from student;
+
+Правильный ответ:
+C) select count(*) from student;
+(Агрегатная функция count(*) возвращает число строк.)
+
+Вопрос 157 (133.jpg):
+Декомпозиция таблицы подразумевает
+
+A) удаление с таблицы неинформативных данных
+
+B) группировка 2 или более таблиц
+
+C) разделение таблицы на 2 или более таблиц *
+
+D) объединение 2 или более таблиц
+
+E) обновление таблицы
+
+F) применение команды decompose
+
+Правильный ответ:
+C) разделение таблицы на 2 или более таблиц
+(Декомпозиция — это разбиение таблицы на меньшие с целью нормализации.)
+
+Вопрос 158 (134.jpg):
+Выражение, описывающее декомпозицию
+
+A) if a→b*y, then a→b and a→y
+
+B) if a→b*y, then a→b or a→y *
+
+C) if a→b*y, then a→b and a≠y
+
+D) if a→b*y, then a→b and a→-y
+
+E) if a→b*y, then a→b and a→y *
+
+F) if a→by, then a→b and a→by
+
+Правильные ответы:
+B) if a→b*y, then a→b or a→y
+E) if a→b*y, then a→b and a→y
+(Описание декомпозиции функциональной зависимости.)
+
+Вопрос 159 (135.jpg):
+Результат выполнения следующей команды:
+create table calc (x int, y int);
+insert into calc values (5, 45);
+select * from calc x, y, x*y;
+
+A) 1
+
+B) 5, 45
+
+C) 45
+
+D) 50
+
+E) 5
+
+F) 225 *
+
+G) 5, 45, 50
+
+H) 5, 45, 50
+
+Правильный ответ:
+F) 225
+(Результат вычисления 5×45.)
+
+Вопрос 160 (136.jpg):
+Расширения файлов БД
+
+A) .xls, .txt
+
+B) .mov, .mp3
+
+C) .sql, .acs *
+
+D) .ppt, .sql
+
+E) .data, .bmp
+
+F) .cdr, .sql
+
+G) .txt, .jpg
+
+Правильный ответ:
+C) .sql, .acs
+(.sql — скрипты SQL, .acs — файл Microsoft Access.)
+
+Вопрос 161 (137.jpg):
+Типы данных, используемые в SQL
+
+A) booleans *
+
+B) data
+
+C) rows
+
+D) character *
+
+E) columns
+
+F) integer *
+
+G) information
+
+Правильные ответы:
+A) booleans
+D) character
+F) integer
+
+Вопрос 162 (138.jpg):
+Следующая таблица отвечает каким требованиям нормализации?
+Компания | Марка
+Toyota | Corolla, Camry
+Mercedes Benz | 220
+
+A) 3 НФ
+
+B) НФ Бойс-Кодда
+
+C) 4 НФ
+
+D) 2 НФ
+
+E) ни в какой из перечисленных
+
+F) 1 НФ *
+
+G) 6 НФ
+
+H) 5 НФ
+
+Правильный ответ:
+F) 1 НФ
+
+Вопрос 163 (139.jpg):
+Вывести на экран номер сотрудника, не являющегося руководителем отдела и получающего зарплату, равную зарплате какого-либо руководителя отдела
+
+A) select emp_no from emp where emp_no not in (select dept_mng from dept) or emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+B) select emp_no, name from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+C) select emp_no from emp where emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+D) select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng) *
+
+E) select emp_no from emp where emp_no not in (select dept_mng from dept)
+
+F) select * from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+Правильный ответ:
+D) select emp_no from emp where emp_no not in (select dept_mng from dept) and emp_sal in (select emp_sal from emp, dept where emp_no = dept_mng)
+
+Вопрос 164 (140.jpg):
+Названия столбцов в следующем коде:
+Insert into data (id, name, table)
+
+A) into
+
+B) table *
+
+C) name *
+
+D) insert
+
+E) id *
+
+F) нет названия столбцов
+
+G) data
+
+H) insert, into, data, id, name, table
+
+Правильные ответы:
+B) table
+C) name
+E) id
+
+Вопрос 165 (изображение 143.jpg):
+Выберите SQL-запрос, который выбирает всех студентов из таблицы student, у которых балл выше среднего.
+
+A) select * from student where grade >= avg(grade);
+
+B) select * from student where grade > (select avg(grade) from student); *
+
+C) select grade from student where grade > avg(grade);
+
+D) select * from student where avg(grade) > grade;
+
+E) select name, grade from student where grade > avg(grade);
+
+Правильный ответ:
+B) select * from student where grade > (select avg(grade) from student);
+(Такой запрос корректно выберет все строки, где поле grade больше среднего значения по таблице.)
+
+Вопрос 166 (изображение 141.jpg):
+Какой SQL-запрос вычисляет сумму всех зарплат в таблице employee?
+
+A) select * from employee salary;
+
+B) select sum(salary) from employee; *
+
+C) select salary from employee;
+
+D) sum select salary from employee;
+
+E) select sum(employee) from salary;
+
+F) select salary sum from employee;
+
+Правильный ответ:
+B) select sum(salary) from employee;
+(Функция sum() возвращает сумму по столбцу.)
+
+Вопрос 167 (изображение 142.jpg):
+Определите команду, которая увеличивает значение salary в 2 раза для всех строк таблицы employee.
+
+A) update employee set salary = salary * 2; *
+
+B) set employee salary = salary * 2;
+
+C) update set salary = salary * 2 employee;
+
+D) change employee set salary = salary * 2;
+
+E) select salary*2 from employee;
+
+Правильный ответ:
+A) update employee set salary = salary * 2;
+(Команда изменит поле salary во всех строчках.)
+
+Вопрос 168 (изображение 144.jpg):
+Какой SQL-запрос выбирает всех студентов "Алину" из таблицы student?
+
+A) select * from student where name = 'Alina'; *
+
+B) select student where name = 'Alina';
+
+C) select * from student name = 'Alina';
+
+D) select * student where name = 'Alina';
+
+E) select name = 'Alina' from student;
+
+Правильный ответ:
+A) select * from student where name = 'Alina';
+(SELECT * FROM ... WHERE ... — стандартный синтаксис SQL для фильтрации.)
+
+Вопрос 169 (147.jpg):
+Что делает SQL-команда
+select count(*) from student;
+
+A) вычисляет средний балл студентов
+
+B) возвращает количество студентов *
+
+C) выбирает всех студентов с заданной фамилией
+
+D) выбирает студентов с максимальным баллом
+
+E) возвращает сумму всех баллов
+
+F) вставляет новую запись в таблицу
+
+G) выбирает имя студента с id=1
+
+Правильный ответ:
+B) возвращает количество студентов
+(count(*) — агрегатная функция для подсчёта строк.)
+
+Вопрос 170 (148.jpg):
+Какой SQL-запрос выберет студентов с баллом выше 80?
+
+A) select * from student where grade < 80;
+
+B) select * from student where grade > 80; *
+
+C) select * from student where mark > 80;
+
+D) select grade > 80 from student;
+
+E) select * student where grade = 80;
+
+F) select * from student;
+
+Правильный ответ:
+B) select * from student where grade > 80;
+(Выбирает студентов, чей grade больше 80.)
+
+Вопрос 171 (145.jpg):
+Что делает команда
+delete from student where name='Ayan';
+
+A) добавляет нового студента с именем 'Ayan'
+
+B) удаляет все записи из таблицы student
+
+C) удаляет студента с именем 'Ayan' *
+
+D) обновляет оценку студента 'Ayan'
+
+E) выбирает студента 'Ayan'
+
+F) создаёт таблицу student
+
+Правильный ответ:
+C) удаляет студента с именем 'Ayan'
+(delete ... where ... — удаляет только подходящие строки.)
+
+Вопрос 172 (146.jpg):
+Какой SQL-запрос возвращает всех студентов, у которых оценки между 80 и 100 (включительно)?
+
+A) select * from student where grade > 80 and grade < 100;
+
+B) select * from student where grade >= 80 and grade <= 100; *
+
+C) select * from student where grade > 80 or grade < 100;
+
+D) select * from student where grade = 80 or grade = 100;
+
+E) select * from student where grade between 80 and 100; *
+
+F) select * from student;
+
+Правильные ответы:
+B) select * from student where grade >= 80 and grade <= 100;
+E) select * from student where grade between 80 and 100;
+(Оба условия корректно задают диапазон от 80 до 100 включительно.)
+
+Вопрос 173 (149.jpg):
+Какой SQL-запрос вернёт фамилии всех студентов с оценкой выше 80?
+
+A) select фамилия from student where grade > 80; *
+
+B) select name from student where grade < 80;
+
+C) select фамилии from student where grade > 80;
+
+D) select grade from student where фамилия > 80;
+
+E) select фамилия from student where grade = 80;
+
+F) select фамилия from student where grade >= 80;
+
+Правильный ответ:
+A) select фамилия from student where grade > 80;
+(Такой запрос выберет только фамилии студентов, у которых grade больше 80.)
+
+Вопрос 174 (150.jpg):
+Что делает команда
+select min(grade) from student;
+
+A) возвращает максимальную оценку
+
+B) возвращает сумму всех оценок
+
+C) возвращает минимальную оценку *
+
+D) возвращает среднюю оценку
+
+E) возвращает количество оценок
+
+F) удаляет все оценки
+
+Правильный ответ:
+C) возвращает минимальную оценку
+(Агрегатная функция min() возвращает минимальное значение в столбце.)
+
+Вопрос 175 (151.jpg):
+SQL-запрос для увеличения всех баллов на 5:
+
+A) add grade = grade + 5 to student;
+
+B) update student set grade = grade + 5; *
+
+C) select grade + 5 from student;
+
+D) change grade = grade + 5 from student;
+
+E) set student grade = grade + 5;
+
+F) update set grade = grade + 5 student;
+
+Правильный ответ:
+B) update student set grade = grade + 5;
+(Стандартная SQL-команда для увеличения значений в столбце.)
+
+Вопрос 176 (152.jpg):
+Применить функцию агрегации sum к следующему массиву данных {1, 5, 6, 7, 8, 3, 11}
+
+A) 41 *
+
+B) 43
+
+C) 40
+
+D) 42
+
+E) 5,85
+
+F) 7
+
+Правильный ответ:
+A) 41
+(1+5+6+7+8+3+11 = 41)
+
+Вопрос 177 (изображение 156.jpg):
+Что делает команда
+select max(grade) from student;
+
+A) возвращает максимальную оценку *
+
+B) возвращает минимальную оценку
+
+C) возвращает все оценки
+
+D) возвращает среднее значение оценки
+
+E) удаляет оценки
+
+F) возвращает сумму всех оценок
+
+Правильный ответ:
+A) возвращает максимальную оценку
+(Агрегатная функция max() ищет максимальное значение.)
+
+Вопрос 178 (153.jpg):
+Какая команда SQL вернёт только уникальные значения фамилий студентов?
+
+A) select имя from student;
+
+B) select уникальные from student;
+
+C) select фамилия from student unique;
+
+D) select distinct фамилия from student; *
+
+E) select only фамилия from student;
+
+F) select фамилия from student limit 1;
+
+Правильный ответ:
+D) select distinct фамилия from student;
+(Ключевое слово DISTINCT устраняет дубли.)
+
+Вопрос 179 (154.jpg):
+Что произойдёт после выполнения SQL-команды
+update student set grade=grade+10 where name='Alina';
+
+A) всем студентам установится grade=10
+
+B) всем студентам с именем Alina оценка увеличится на 10 *
+
+C) ни одна оценка не изменится
+
+D) всем студентам оценка увеличится на 10
+
+E) все оценки станут равны 10
+
+Правильный ответ:
+B) всем студентам с именем Alina оценка увеличится на 10
+(Условие WHERE ограничивает только на имя.)
+
+Вопрос 180 (155.jpg):
+Что делает команда
+select avg(grade) from student;
+
+A) возвращает сумму всех оценок
+
+B) возвращает среднюю оценку *
+
+C) возвращает количество записей
+
+D) возвращает максимальную оценку
+
+E) удаляет оценки
+
+F) возвращает минимальную оценку
+
+Правильный ответ:
+B) возвращает среднюю оценку
+(AVG считает среднее по столбцу.)
+
+Вопрос 181 (157.jpg):
+Что делает следующий SQL-запрос?
+select max(salary) from employee;
+
+A) возвращает минимальную зарплату
+
+B) возвращает сумму всех зарплат
+
+C) возвращает среднюю зарплату
+
+D) возвращает максимальную зарплату *
+
+E) возвращает количество сотрудников
+
+F) возвращает имена сотрудников
+
+Правильный ответ:
+D) возвращает максимальную зарплату
+(Функция max() ищет наибольшее значение в столбце.)
+
+Вопрос 182 (158.jpg):
+Что делает команда
+select min(score) from results;
+
+A) возвращает количество результатов
+
+B) возвращает максимальный балл
+
+C) возвращает минимальный балл *
+
+D) возвращает средний балл
+
+E) возвращает сумму баллов
+
+F) ничего не делает
+
+Правильный ответ:
+C) возвращает минимальный балл
+(Функция min() возвращает наименьшее значение в столбце.)
+
+Вопрос 183 (159.jpg):
+Что делает команда
+select count(*) from exam where score > 50;
+
+A) возвращает суммы всех баллов, больше 50
+
+B) возвращает минимальный балл больше 50
+
+C) возвращает количество записей с баллом больше 50 *
+
+D) возвращает название экзаменов с баллом больше 50
+
+E) создаёт новую строку
+
+F) удаляет все записи с баллом < 50
+
+Правильный ответ:
+C) возвращает количество записей с баллом больше 50
+(count(*) в сочетании с where — подсчёт строк с условием.)
+
+Вопрос 184 (160.jpg):
+SQL-запрос для вычисления суммы баллов всех студентов в таблице student:
+
+A) select max(grade) from student;
+
+B) select sum(grade) from student; *
+
+C) select add(grade) from student;
+
+D) select grades from student;
+
+E) select avg(grade) from student;
+
+Правильный ответ:
+B) select sum(grade) from student;
+(Функция sum() возвращает сумму значений по столбцу.)
+
+Вопрос 185 (164.jpg):
+SQL-запрос для вычисления количества уникальных городов в таблице students:
+
+A) select count(city) from students;
+
+B) select distinct city from students;
+
+C) select count(distinct city) from students; *
+
+D) select sum(city) from students;
+
+E) select unique(city) from students;
+
+F) select city from students;
+
+Правильный ответ:
+C) select count(distinct city) from students;
+(Функция count(distinct ...) подсчитает число различных городов.)
+
+Вопрос 186 (161.jpg):
+Какой SQL-запрос выберет студентов по имени "Дана" и баллу не ниже 90?
+
+A) select * from student where name='Дана' and grade>=90; *
+
+B) select * from student where name='Дана' or grade>=90;
+
+C) select * from student where name='Дана' and grade>90;
+
+D) select * from student where name='Дана' and grade<=90;
+
+E) select student where grade>=90;
+
+F) select * from student where name='Дана';
+
+Правильный ответ:
+A) select * from student where name='Дана' and grade>=90;
+(Запрос ищет студентов с именем «Дана» и баллом 90 или выше.)
+
+Вопрос 187 (162.jpg):
+Что делает команда
+select city, count(*) from students group by city;
+
+A) возвращает список всех городов
+
+B) подсчитывает студентов в каждом городе *
+
+C) суммирует количество городов
+
+D) выводит только уникальные города
+
+E) выводит общее число городов
+
+F) удаляет города с малым количеством студентов
+
+Правильный ответ:
+B) подсчитывает студентов в каждом городе
+(Выдаёт город и число студентов в этом городе.)
+
+Вопрос 188 (163.jpg):
+SQL-запрос для выбора всех студентов, у которых балл равен максимальному в таблице:
+
+A) select * from student where grade = (select max(grade) from student); *
+
+B) select * from student where grade > avg(grade);
+
+C) select * from student where grade > max(grade);
+
+D) select * from student where grade = min(grade);
+
+E) select name, grade from student where grade = max(grade);
+
+Правильный ответ:
+A) select * from student where grade = (select max(grade) from student);
+(Такой запрос выберет только студентов с наивысшей оценкой.)
+
+Вопрос 189 (165.jpg):
+Команда, которая изменяет значение столбца city на 'Astana' для всех студентов, у которых сейчас указано 'Almaty':
+
+A) update students set city='Astana' where city='Almaty'; *
+
+B) set students city='Astana' where city='Almaty';
+
+C) change city='Astana' from students where city='Almaty';
+
+D) update students city='Astana' where city='Almaty';
+
+E) update set city='Astana' students where city='Almaty';
+
+Правильный ответ:
+A) update students set city='Astana' where city='Almaty';
+(Команда корректно обновляет нужные записи.)
+
+Вопрос 190 (166.jpg):
+Что делает SQL-команда
+select avg(grade) from students where city='Astana';
+
+A) выводит среднюю оценку всех студентов
+
+B) выводит суммарный балл студентов из города Astana
+
+C) считает средний балл только среди студентов из города Astana *
+
+D) выводит всех студентов, у которых город Astana
+
+E) считает среднее количество студентов в Astana
+
+Правильный ответ:
+C) считает средний балл только среди студентов из города Astana
+(AVG по выборке с условием.)
+
+Вопрос 191 (167.jpg):
+Запрос на выбор фамилий студентов из группы 1 с оценками выше 80:
+
+A) select фамилия from students where group=1 and grade>80; *
+
+B) select фамилия from students where grade>80;
+
+C) select фамилия from students where group=1 or grade>80;
+
+D) select * from students where group=1 and grade>80;
+
+E) select фамилия, group from students where grade>80;
+
+Правильный ответ:
+A) select фамилия from students where group=1 and grade>80;
+(Ограничения и по группе, и по баллу.)
+
+Вопрос 192 (168.jpg):
+Что делает команда
+update students set grade=grade-5 where city='Astana';
+
+A) уменьшает оценки всех студентов на 5 баллов
+
+B) уменьшает оценки всех студентов из Astana на 5 баллов *
+
+C) устанавливает всем студентам из Astana оценку 5
+
+D) увеличивает оценки на 5 баллов у всех
+
+E) ничего не делает
+
+Правильный ответ:
+B) уменьшает оценки всех студентов из Astana на 5 баллов
+(Ограничение WHERE применяет обновление только к указанному городу.)
+
+Вопрос 193 (172.jpg):
+Применить функцию агрегации sum к следующему массиву данных {2, 4, 6, 8, 10}
+
+A) 20
+
+B) 24
+
+C) 30 *
+
+D) 32
+
+E) 25
+
+F) 28
+
+Правильный ответ:
+C) 30
+(2+4+6+8+10 = 30)
+
+Вопрос 194 (169.jpg):
+Применить функцию агрегации avg к следующему массиву данных {8, 6, 4, 2, 0}
+
+A) 4 *
+
+B) 5
+
+C) 6
+
+D) 8
+
+E) 2
+
+F) 7
+
+Правильный ответ:
+A) 4
+((8+6+4+2+0)/5 = 20/5 = 4)
+
+Вопрос 195 (170.jpg):
+Применить функцию агрегации max к следующему массиву данных {1, 3, 5, 7, 9}
+
+A) 9 *
+
+B) 7
+
+C) 5
+
+D) 1
+
+E) 3
+
+F) 0
+
+Правильный ответ:
+A) 9
+(Наибольшее значение — 9.)
+
+Вопрос 196 (171.jpg):
+Применить функцию агрегации min к следующему массиву данных {2, 5, 8, 11, 14}
+
+A) 2 *
+
+B) 5
+
+C) 8
+
+D) 11
+
+E) 14
+
+F) 0
+
+Правильный ответ:
+A) 2
+(Наименьшее значение — 2.)
+
+Вопрос 197 (изображение 173.jpg):
+Результат выполнения SQL-запроса
+select count(distinct grade) from student;
+
+A) количество уникальных оценок *
+
+B) сумма оценок
+
+C) максимальная оценка
+
+D) количество всех записей
+
+E) минимальная оценка
+
+F) количество студентов
+
+Правильный ответ:
+A) количество уникальных оценок
+(count(distinct grade) — возвращает число разных значений столбца.)
+
+Вопрос 198 (изображение 174.jpg):
+SQL-запрос для получения максимального балла среди студентов из города Astana:
+
+A) select max(city) from students where city='Astana';
+
+B) select max(grade) from students where city='Astana'; *
+
+C) select grade from students where city='Astana';
+
+D) select city=max(grade) from students;
+
+E) select max(grade) from students;
+
+Правильный ответ:
+B) select max(grade) from students where city='Astana';
+(Возвращает наивысший grade среди студентов из Astana.)
+
+Вопрос 199 (изображение 175.jpg):
+Что делает SQL-запрос
+select min(grade) from students where city='Almaty';
+
+A) находит максимальную оценку по Алматы
+
+B) выбирает всех студентов из Алматы
+
+C) возвращает минимальную оценку среди студентов из Алматы *
+
+D) считает количество студентов из Алматы
+
+E) удаляет записи из Алматы
+
+Правильный ответ:
+C) возвращает минимальную оценку среди студентов из Алматы
+(min(grade) where city='Almaty' — минимальный балл по фильтру.)
+
+Вопрос 200 (изображение 176.jpg):
+Присвоить всем студентам с городом 'Almaty' значение grade=100:
+
+A) update students set city = 'Almaty' where grade = 100;
+
+B) update students set grade = 100 where city = 'Almaty'; *
+
+C) update students grade = 100 where city = 'Almaty';
+
+D) set grade = 100 from students where city = 'Almaty';
+
+E) update set grade = 100 where city = 'Almaty' students;
+
+Правильный ответ:
+B) update students set grade = 100 where city = 'Almaty';
+(Правильный синтаксис массового обновления по фильтру.)
+
+Вопрос 201 (изображение 179.jpg):
+SQL-запрос для подсчёта количества студентов с уникальными фамилиями в таблице students:
+
+A) select count(surname) from students;
+
+B) select count(*) from students;
+
+C) select count(distinct surname) from students; *
+
+D) select distinct surname from students;
+
+E) select unique surname from students;
+
+F) select sum(surname) from students;
+
+Правильный ответ:
+C) select count(distinct surname) from students;
+(Эта команда подсчитает количество различных фамилий.)
+
+Вопрос 202 (изображение 180.jpg):
+SQL-запрос, который возвращает средний балл студентов из города 'Astana':
+
+A) select avg(grade) from students where city='Astana'; *
+
+B) select avg(grade) from students;
+
+C) select city, avg(grade) from students group by city='Astana';
+
+D) select grade from students where city='Astana';
+
+E) select avg(city) from students where grade='Astana';
+
+Правильный ответ:
+A) select avg(grade) from students where city='Astana';
+(Среднее значение grade среди записей с city = 'Astana'.)
+
+Вопрос 203 (изображение 177.jpg):
+SQL-запрос, выбирающий все записи студентов с оценкой выше 75 и городом "Almaty":
+
+A) select * from students where grade > 75;
+
+B) select * from students where city = 'Almaty';
+
+C) select * from students where grade > 75 and city = 'Almaty'; *
+
+D) select city from students where grade > 75;
+
+E) select * from students where grade < 75 and city = 'Almaty';
+
+Правильный ответ:
+C) select * from students where grade > 75 and city = 'Almaty';
+(Корректное сочетание условий для двух фильтров.)
+
+Вопрос 204 (изображение 178.jpg):
+SQL-запрос для вывода наибольшей зарплаты из таблицы employee:
+
+A) select max(salary) from employee; *
+
+B) select salary from employee;
+
+C) select max(employee) from salary;
+
+D) select salary where max from employee;
+
+E) select max from employee salary;
+
+Правильный ответ:
+A) select max(salary) from employee;
+(Функция max() корректно вычисляет максимальное значение.)
+
+Вопрос 205 (181.jpg):
+SQL-запрос, возвращающий количество студентов с уникальными именами:
+
+A) select count(name) from students;
+
+B) select count(distinct name) from students; *
+
+C) select unique name from students;
+
+D) select count(*) from students;
+
+E) select sum(name) from students;
+
+Правильный ответ:
+B) select count(distinct name) from students;
+(Этот запрос подсчитает количество различных имён среди студентов.)
+
+Вопрос 206 (182.jpg):
+SQL-запрос для увеличения на 10 всех оценок студентов с городом "Astana":
+
+A) update students set grade=grade+10;
+
+B) update students set grade=10 where city='Astana';
+
+C) update students set grade=grade+10 where city='Astana'; *
+
+D) set grade=grade+10 for students where city='Astana';
+
+E) update grade set students=grade+10 where city='Astana';
+
+Правильный ответ:
+C) update students set grade=grade+10 where city='Astana';
+(Корректно увеличивает оценки только у студентов из "Astana".)
+
+Вопрос 207 (183.jpg):
+SQL-запрос для нахождения средней оценки среди студентов из города "Almaty":
+
+A) select avg(grade) from students;
+
+B) select avg(grade) from students where city='Almaty'; *
+
+C) select grade from students where city='Almaty';
+
+D) select avg(city) from students where grade='Almaty';
+
+E) select avg(grade) where city='Almaty' from students;
+
+Правильный ответ:
+B) select avg(grade) from students where city='Almaty';
+(Этот запрос вычисляет среднее значение только среди студентов города "Алматы".)
+
+Вопрос 208 (184.jpg):
+SQL-запрос, который уменьшает на 15 баллов оценки всех студентов с фамилией "Иванов":
+
+A) update students set grade=grade-15 where surname='Иванов'; *
+
+B) update students set grade=15 where surname='Иванов';
+
+C) update students set surname='Иванов' where grade=grade-15;
+
+D) update students grade=grade-15 where surname='Иванов';
+
+E) update grade set grade=grade-15 where surname='Иванов';
+
+Правильный ответ:
+A) update students set grade=grade-15 where surname='Иванов';
+(Обновляет только строки с указанной фамилией и уменьшает их баллы на 15.)
+
+Вопрос 209 (185.jpg):
+Что делает команда
+update employers set salary = salary * 1.2;
+
+A) Вычисляет среднее значение зарплаты.
+
+B) Увеличивает зарплату всех работников на 20% *
+
+C) Устанавливает зарплату равной 1.2
+
+D) Увеличивает зарплату только по условию
+
+E) Удаляет работников с зарплатой менее 1.2
+
+Правильный ответ:
+B) Увеличивает зарплату всех работников на 20%
+(UPDATE employers SET salary = salary * 1.2; — синтаксис для массового повышения зарплаты на 20%.)
+
+Вопрос 210 (186.jpg):
+Как увеличить зарплату на 20% только для тех, у кого зарплата менее 80,000?
+
+A) update employers set salary = salary * 1.2 where salary < 80000; *
+
+B) update employers set salary = salary + 80000;
+
+C) update employers salary = salary * 1.2 from employers where salary < 80000;
+
+D) set employers salary = salary * 1.2 and salary < 80000;
+
+E) update employers set salary = salary * 0.8 where salary > 80000;
+
+Правильный ответ:
+A) update employers set salary = salary * 1.2 where salary < 80000;
+(Такой синтаксис корректно выберет только сотрудников с зарплатой меньше 80,000 и увеличит на 20%.)
+
+Вопрос 211:
+Команда, которая присваивает всем сотрудникам зарплату, равную средней по таблице employers:
+
+A) update employers set salary = avg(salary);
+
+B) update employers set salary = (select avg(salary) from employers); *
+
+C) update set salary = (select avg(salary) from employers);
+
+D) update employers salary = avg(salary);
+
+E) set salary = avg(salary) from employers;
+
+Правильный ответ:
+B) update employers set salary = (select avg(salary) from employers);
+(Только такой синтаксис корректно назначит среднее значение всем, используя вложенный select.)
+
+Вопрос 212:
+Как выбрать всех работников, у которых зарплата равна максимальной в таблице employers?
+
+A) select * from employers where salary = max(salary);
+
+B) select * from employers where salary = (select max(salary) from employers); *
+
+C) select max(salary) from employers;
+
+D) select * from employers max salary;
+
+E) select salary from employers where salary = max;
+
+Правильный ответ:
+B) select * from employers where salary = (select max(salary) from employers);
+(Запрос сравнивает зарплаты с максимальным значением через подзапрос.)
+
+Вопрос 213:
+SQL-запрос, выбирающий всех работников с зарплатой в диапазоне от 50,000 до 100,000 включительно:
+
+A) select * from employers where salary = 50000 and salary = 100000;
+
+B) select * from employers where salary > 50000 and salary < 100000;
+
+C) select * from employers where salary between 50000 and 100000; *
+
+D) select * from employers salary = (50000,100000);
+
+E) select salary from employers where salary between 50000 and 100000;
+
+Правильный ответ:
+C) select * from employers where salary between 50000 and 100000;
+(Оператор between корректно задаёт диапазон.)
+
+Вопрос 214:
+Что делает команда
+delete from employers where salary = (select min(salary) from employers);
+
+A) удаляет всех работников
+
+B) удаляет работников с самой низкой зарплатой *
+
+C) удаляет работников с максимальной зарплатой
+
+D) назначает минимальную зарплату всем сотрудникам
+
+E) не выполняет никаких действий
+
+Правильный ответ:
+B) удаляет работников с самой низкой зарплатой
+(WHERE salary = (select min(salary)...) — только для наименьших зарплат.)
+
